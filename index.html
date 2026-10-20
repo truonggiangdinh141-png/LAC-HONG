@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thái Cổ Thần Ma Lục — Đọc Truyện & Hồ Sơ Thần Vị - Ma Vị</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts hỗ trợ tiếng Việt cổ phong & hiện đại -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        title: ['"Playfair Display"', 'serif'],
+                        ancient: ['"Cinzel Decorative"', '"Playfair Display"', 'serif'],
+                        serif: ['"Noto Serif"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#08090d',
+                        jade: '#00f5d4',
+                        celestial: '#fbbf24',
+                        abyss: '#ff1e42',
+                        nether: '#9333ea'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --theme-primary: #f59e0b;
+            --theme-secondary: #10b981;
+            --theme-glow: rgba(245, 158, 11, 0.35);
+        }
+
+        body {
+            background-color: #07080c;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar Cổ Phong */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0d14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #b45309, #78350f);
+            border-radius: 4px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #f59e0b, #b45309);
+        }
+
+        /* Khung viền Cổ Phong Gaming */
+        .ancient-card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(17, 20, 30, 0.92), rgba(9, 11, 17, 0.96));
+            border: 1px solid rgba(245, 158, 11, 0.28);
+            box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(245, 158, 11, 0.05);
+        }
+        .ancient-card::before, .ancient-card::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-color: #fbbf24;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .ancient-card::before {
+            top: -1px;
+            left: -1px;
+            border-top: 2px solid #fbbf24;
+            border-left: 2px solid #fbbf24;
+        }
+        .ancient-card::after {
+            bottom: -1px;
+            right: -1px;
+            border-bottom: 2px solid #fbbf24;
+            border-right: 2px solid #fbbf24;
+        }
+
+        /* Khung Thần Vị (Celestial Gold & Cyan) */
+        .divine-card {
+            position: relative;
+            background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.12), rgba(14, 21, 35, 0.95) 65%);
+            border: 1px solid rgba(251, 191, 36, 0.45);
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.12), inset 0 0 25px rgba(56, 189, 248, 0.06);
+        }
+        .divine-glow-text {
+            text-shadow: 0 0 15px rgba(251, 191, 36, 0.65), 0 0 30px rgba(245, 158, 11, 0.35);
+        }
+
+        /* Khung Ma Vị (Abyssal Crimson & Nether Purple) */
+        .demonic-card {
+            position: relative;
+            background: radial-gradient(circle at top right, rgba(225, 29, 72, 0.16), rgba(15, 8, 16, 0.96) 65%);
+            border: 1px solid rgba(244, 63, 94, 0.45);
+            box-shadow: 0 0 35px rgba(225, 29, 72, 0.16), inset 0 0 25px rgba(147, 51, 234, 0.08);
+        }
+        .demonic-glow-text {
+            text-shadow: 0 0 15px rgba(244, 63, 94, 0.75), 0 0 30px rgba(147, 51, 234, 0.5);
+        }
+
+        /* Nút bấm Gaming Cổ Phong */
+        .btn-ancient-gold {
+            background: linear-gradient(135deg, #d97706 0%, #fbbf24 50%, #b45309 100%);
+            background-size: 200% auto;
+            color: #090a0f;
+            font-weight: 700;
+            border: 1px solid #fde68a;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+        .btn-ancient-gold:hover {
+            background-position: right center;
+            transform: translateY(-1px);
+            box-shadow: 0 0 25px rgba(251, 191, 36, 0.75);
+        }
+
+        .btn-ancient-crimson {
+            background: linear-gradient(135deg, #9f1239 0%, #e11d48 50%, #881337 100%);
+            background-size: 200% auto;
+            color: #fff;
+            font-weight: 700;
+            border: 1px solid #fda4af;
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+            transition: all 0.3s ease;
+        }
+        .btn-ancient-crimson:hover {
+            background-position: right center;
+            transform: translateY(-1px);
+            box-shadow: 0 0 25px rgba(244, 63, 94, 0.85);
+        }
+
+        /* Hiệu ứng hào quang xoay sau lưng nhân vật */
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes pulseAura {
+            0%, 100% { opacity: 0.55; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.04); }
+        }
+        .magic-circle-spin {
+            animation: spinSlow 36s linear infinite;
+        }
+        .aura-pulse {
+            animation: pulseAura 4s ease-in-out infinite;
+        }
+
+        /* Thanh chỉ số RPG */
+        .stat-bar-fill {
+            transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Chế độ màu nền đọc truyện */
+        .reader-theme-obsidian {
+            background: linear-gradient(180deg, rgba(13, 16, 25, 0.95), rgba(9, 11, 18, 0.98));
+            color: #e2e8f0;
+        }
+        .reader-theme-parchment {
+            background: linear-gradient(180deg, #f3ead8, #e8dec8);
+            color: #2c221E;
+        }
+        .reader-theme-jade {
+            background: linear-gradient(180deg, #0d1f1d, #071412);
+            color: #d1fae5;
+        }
+
+        /* Drop cap chữ cái đầu chương */
+        .story-content p:first-of-type::first-letter {
+            float: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.4rem;
+            line-height: 0.85;
+            padding-top: 4px;
+            padding-right: 12px;
+            padding-bottom: 4px;
+            color: #fbbf24;
+            font-weight: 800;
+            text-shadow: 0 0 12px rgba(251, 191, 36, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-500 selection:text-black">
+
+    <!-- CANVAS HẠT LINH KHÍ / MA KHÍ NỀN -->
+    <canvas id="bgParticleCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-65"></canvas>
+
+    <!-- THANH ĐIỀU HƯỚNG CỔ PHONG GAMING (TOP HUD NAVBAR) -->
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#080a10]/90 border-b border-amber-500/30 shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between py-3 gap-3">
+                
+                <!-- Logo & Tên Web -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="switchMainTab('reader')">
+                    <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-500 via-yellow-600 to-amber-900 p-[2px] shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+                        <div class="w-full h-full bg-[#090b10] rounded-[6px] flex items-center justify-center">
+                            <span class="font-title font-bold text-xl text-amber-400">道</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h1 class="font-title font-extrabold text-lg sm:text-xl tracking-wider bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-200 bg-clip-text text-transparent">
+                                THÁI CỔ THẦN MA LỤC
+                            </h1>
+                            <span class="hidden sm:inline-block text-[10px] uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">
+                                Cổ Phong RPG
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-400 hidden sm:block">Tàng Kinh Các • Bảng Phong Thần • Vạn Ma Điện</p>
+                    </div>
+                </div>
+
+                <!-- 3 Nút Chuyển Trang Chính -->
+                <nav class="flex items-center gap-1.5 sm:gap-2 bg-[#0d101a] p-1.5 rounded-xl border border-slate-800">
+                    <button id="nav-reader" onclick="switchMainTab('reader')" class="nav-tab-btn flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-gradient-to-r from-amber-500/25 to-yellow-600/15 text-amber-300 border border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.25)]">
+                        <i class="fa-solid fa-book-journal-whills text-amber-400"></i>
+                        <span>Đọc Truyện</span>
+                    </button>
+
+                    <button id="nav-thanvi" onclick="switchMainTab('thanvi')" class="nav-tab-btn flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-slate-300 hover:text-amber-300 border border-transparent">
+                        <i class="fa-solid fa-crown text-yellow-400"></i>
+                        <span>Thần Vị</span>
+                        <span id="badge-count-thanvi" class="px-1.5 py-0.2 text-[10px] rounded-full bg-amber-500/20 text-amber-300 border border-amber-400/30">3</span>
+                    </button>
+
+                    <button id="nav-mavi" onclick="switchMainTab('mavi')" class="nav-tab-btn flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-slate-300 hover:text-rose-400 border border-transparent">
+                        <i class="fa-solid fa-fire-flame-curved text-rose-500"></i>
+                        <span>Ma Vị</span>
+                        <span id="badge-count-mavi" class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30">3</span>
+                    </button>
+                </nav>
+
+                <!-- Cụm Nút Nạp Nhanh -->
+                <div class="flex items-center gap-2">
+                    <button onclick="openChapterModal('add')" class="px-3 py-2 rounded-lg text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5 transition" title="Nạp Text Chương Mới">
+                        <i class="fa-solid fa-file-circle-plus"></i>
+                        <span class="hidden md:inline">Nạp Text Truyện</span>
+                    </button>
+                    <button onclick="openCharacterModal('thanvi')" class="px-3 py-2 rounded-lg text-xs font-bold bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 flex items-center gap-1.5 transition" title="Nạp Hồ Sơ Thần Vị / Ma Vị">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <span class="hidden md:inline">+ Hồ Sơ Thần/Ma</span>
+                    </button>
+                    <button onclick="openResetConfirmModal()" class="p-2 rounded-lg text-xs text-slate-400 hover:text-rose-400 hover:bg-slate-800/60 border border-slate-800 transition" title="Khôi phục dữ liệu mẫu mặc định">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="flex-1 relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- =====================================================================
+             PHẦN 1: TRANG ĐỌC TRUYỆN (TÀNG KINH CÁC)
+             ===================================================================== -->
+        <section id="section-reader" class="space-y-8">
+
+            <!-- HERO BANNER: ẢNH BÌA TRUYỆN & THÔNG TIN TÁC PHẨM -->
+            <div class="ancient-card rounded-2xl p-5 sm:p-8 overflow-hidden relative">
+                <!-- Hoa văn chìm nền -->
+                <div class="absolute -right-16 -top-16 w-72 h-72 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-16 -bottom-16 w-72 h-72 rounded-full bg-teal-500/10 blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
+                    <!-- Cột Ảnh Bìa Truyện -->
+                    <div class="lg:col-span-4 xl:col-span-3 flex flex-col items-center">
+                        <div class="relative group w-56 sm:w-64 aspect-[3/4] rounded-xl overflow-hidden border-2 border-amber-400/60 shadow-[0_0_35px_rgba(245,158,11,0.3)] bg-slate-900">
+                            <img id="novel-cover-img" src="" alt="Ảnh bìa truyện" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Nhãn góc trên -->
+                            <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md border border-amber-400/50 text-[11px] font-bold text-amber-300 uppercase tracking-wider">
+                                <i class="fa-solid fa-dragon mr-1"></i> Tiên Hiệp Cổ Phong
+                            </div>
+                            <!-- Lớp phủ đổi ảnh bìa khi hover -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                <button onclick="openCoverModal()" class="w-full py-2.5 rounded-lg btn-ancient-gold text-xs flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-camera-rotate"></i> Đổi Ảnh Bìa & Info
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Nút đổi ảnh bìa hiển thị rõ dưới ảnh cho mobile/desktop -->
+                        <div class="flex items-center gap-2 mt-3">
+                            <button onclick="openCoverModal()" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 flex items-center gap-1.5 transition">
+                                <i class="fa-solid fa-image"></i> Nạp Ảnh Bìa / Sửa Truyện
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cột Thông Tin Truyện -->
+                    <div class="lg:col-span-8 xl:col-span-9 space-y-4 text-center lg:text-left">
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-400/40">
+                                <i class="fa-solid fa-scroll mr-1"></i> <span id="novel-genre-badge">Thái Cổ Huyền Huyễn</span>
+                            </span>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                                <i class="fa-solid fa-circle-check mr-1"></i> <span id="novel-status-badge">Đang Lên Chương</span>
+                            </span>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/15 text-sky-300 border border-sky-500/30">
+                                <i class="fa-solid fa-layer-group mr-1"></i> <span id="novel-chapter-count">3 Chương</span>
+                            </span>
+                        </div>
+
+                        <h2 id="novel-title" class="font-title font-extrabold text-2xl sm:text-4xl lg:text-5xl text-amber-100 divine-glow-text tracking-wide leading-tight">
+                            VẠN CỔ THẦN MA KỶ
+                        </h2>
+
+                        <p class="text-sm text-amber-300/90 font-medium">
+                            Chấp bút: <span id="novel-author" class="text-white font-semibold">Thiên Cơ Lão Nhân</span>
+                            <span class="mx-2 text-slate-600">|</span>
+                            Hệ thống tu luyện: <span id="novel-system" class="text-teal-300">Thần Đạo & Ma Đạo Song Tu</span>
+                        </p>
+
+                        <p id="novel-synopsis" class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl font-serif italic bg-black/35 p-4 rounded-xl border border-slate-800/80">
+                            <!-- Synopsis rendered by JS -->
+                        </p>
+
+                        <!-- Hàng nút hành động chính trên bảng truyện -->
+                        <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                            <button onclick="scrollToReaderZone()" class="px-5 py-2.5 rounded-xl btn-ancient-gold text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-book-open-reader"></i> Đọc Ngay Chương Hiện Tại
+                            </button>
+                            <button onclick="openChapterModal('add')" class="px-4 py-2.5 rounded-xl bg-emerald-600/25 hover:bg-emerald-600/35 text-emerald-300 border border-emerald-400/50 text-sm font-bold flex items-center gap-2 transition shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                <i class="fa-solid fa-plus-circle"></i> Nạp Text / Thêm Chương Mới
+                            </button>
+                            <button onclick="switchMainTab('thanvi')" class="px-4 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/40 text-sm font-semibold flex items-center gap-2 transition">
+                                <i class="fa-solid fa-crown"></i> Xem Bảng Thần Vị
+                            </button>
+                            <button onclick="switchMainTab('mavi')" class="px-4 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/40 text-sm font-semibold flex items-center gap-2 transition">
+                                <i class="fa-solid fa-skull"></i> Xem Vạn Ma Điện
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KHU VỰC ĐỌC TRUYỆN THÔNG MINH (SMART CHAPTER LAYOUT) -->
+            <div id="reader-zone" class="space-y-6">
+
+                <!-- 1. THANH ĐIỀU KHIỂN CHƯƠNG & TÙY CHỈNH GIAO DIỆN ĐỌC -->
+                <div class="ancient-card rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
+                    <!-- Chọn Chương -->
+                    <div class="flex items-center gap-2 w-full sm:w-auto">
+                        <button onclick="navigateChapter(-1)" class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-amber-500/20 text-slate-200 hover:text-amber-300 border border-slate-700 transition text-sm" title="Chương trước">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <select id="chapter-select" onchange="selectChapter(this.value)" class="flex-1 sm:w-72 bg-[#0d1018] text-amber-200 font-semibold text-sm rounded-lg px-3.5 py-2 border border-amber-500/40 focus:outline-none focus:border-amber-400">
+                            <!-- Options rendered by JS -->
+                        </select>
+                        <button onclick="navigateChapter(1)" class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-amber-500/20 text-slate-200 hover:text-amber-300 border border-slate-700 transition text-sm" title="Chương tiếp">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Nút Nạp Nhanh Cho Chương Đang Đọc -->
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button onclick="openChapterModal('edit')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 flex items-center gap-1.5 transition">
+                            <i class="fa-solid fa-pen-to-square"></i> Nạp / Sửa Text Chương Này
+                        </button>
+                        <button onclick="openQuickMediaModal('podcast')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-500/40 flex items-center gap-1.5 transition">
+                            <i class="fa-solid fa-headphones"></i> + Link Podcast
+                        </button>
+                        <button onclick="openQuickMediaModal('image')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-500/40 flex items-center gap-1.5 transition">
+                            <i class="fa-solid fa-images"></i> + Ảnh Chương
+                        </button>
+                        <button onclick="openQuickMediaModal('video')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-purple-500/15 hover:bg-purple-500/25 text-purple-300 border border-purple-500/40 flex items-center gap-1.5 transition">
+                            <i class="fa-solid fa-film"></i> + Link Video
+                        </button>
+                    </div>
+
+                    <!-- Tùy chỉnh cỡ chữ & màu nền giấy -->
+                    <div class="flex items-center gap-3 ml-auto">
+                        <div class="flex items-center bg-slate-900 rounded-lg p-1 border border-slate-800">
+                            <button onclick="changeFontSize(-2)" class="px-2.5 py-1 text-xs text-slate-300 hover:text-amber-300 font-bold" title="Giảm cỡ chữ">A-</button>
+                            <span id="font-size-label" class="px-2 text-xs text-amber-400 font-semibold">19px</span>
+                            <button onclick="changeFontSize(2)" class="px-2.5 py-1 text-xs text-slate-300 hover:text-amber-300 font-bold" title="Tăng cỡ chữ">A+</button>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <button onclick="setReaderTheme('obsidian')" class="w-6 h-6 rounded-full bg-[#0d1019] border-2 border-amber-400" title="Nền Hắc Ngọc"></button>
+                            <button onclick="setReaderTheme('parchment')" class="w-6 h-6 rounded-full bg-[#f3ead8] border border-slate-500" title="Nền Cổ Thư Vàng"></button>
+                            <button onclick="setReaderTheme('jade')" class="w-6 h-6 rounded-full bg-[#0d1f1d] border border-teal-500" title="Nền Thanh Ngọc"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. BỐ CỤC CHI TIẾT TRONG TỪNG CHƯƠNG (ĐẦU CHƯƠNG - THÂN CHƯƠNG - CUỐI CHƯƠNG) -->
+                <article id="chapter-paper" class="ancient-card reader-theme-obsidian rounded-2xl p-5 sm:p-10 lg:p-12 transition-colors duration-300 space-y-8">
+                    
+                    <!-- [PHẦN ĐẦU CHƯƠNG]: TIÊU ĐỀ CHƯƠNG + TRÌNH PHÁT PODCAST / AUDIO DẪN TRUYỆN -->
+                    <header class="border-b border-amber-500/25 pb-6 space-y-5">
+                        <div class="text-center space-y-2">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest">
+                                <i class="fa-solid fa-compass"></i> <span id="chapter-Order-badge">CHƯƠNG 1</span>
+                            </div>
+                            <h3 id="chapter-title-display" class="font-title font-extrabold text-2xl sm:text-4xl text-amber-300 tracking-wide">
+                                <!-- Chapter Title -->
+                            </h3>
+                            <p id="chapter-meta-display" class="text-xs text-slate-400">
+                                <!-- Word count & reading time -->
+                            </p>
+                        </div>
+
+                        <!-- KHU VỰC PODCAST / AUDIO DẪN TRUYỆN (ĐẶT Ở ĐẦU CHƯƠNG ĐỂ VỪA NGHE VỪA ĐỌC) -->
+                        <div class="rounded-xl bg-gradient-to-r from-[#0c1618]/95 via-[#0f172a]/95 to-[#13111c]/95 border border-teal-500/40 p-4 shadow-[0_0_25px_rgba(20,184,166,0.12)]">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-9 h-9 rounded-lg bg-teal-500/20 border border-teal-400/50 flex items-center justify-center text-teal-300">
+                                        <i class="fa-solid fa-podcast text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-xs font-extrabold uppercase tracking-wider text-teal-300">Đài Thính Thư • Podcast Đầu Chương</span>
+                                            <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/20 text-teal-200 border border-teal-500/30">Vừa nghe vừa đọc</span>
+                                        </div>
+                                        <p id="podcast-title-display" class="text-xs text-slate-300 mt-0.5">
+                                            Bật thuyết minh hoặc cổ cầm dẫn truyện ngay từ đầu chương
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <button onclick="toggleBuiltinGuzhengAudio()" id="btn-builtin-bgm" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/40 flex items-center gap-1.5 transition">
+                                        <i class="fa-solid fa-music"></i> <span id="builtin-bgm-label">Phát Nhạc Cổ Cầm</span>
+                                    </button>
+                                    <button onclick="openQuickMediaModal('podcast')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-teal-500/20 hover:bg-teal-500/30 text-teal-200 border border-teal-400/50 flex items-center gap-1.5 transition">
+                                        <i class="fa-solid fa-link"></i> + Nạp Link Podcast / Audio
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Trình phát Podcast (Audio / Embed / Link ngoài) -->
+                            <div id="podcast-player-container" class="mt-2">
+                                <!-- Rendered dynamically by JS -->
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- [PHẦN THÂN CHƯƠNG - 1]: TRANH MINH HỌA MỞ ĐẦU & NỘI DUNG VĂN BẢN -->
+                    <div class="space-y-6">
+                        <!-- Khung Họa Quyển Minh Họa Chương (Nằm xen kẽ trong thân chương) -->
+                        <div class="rounded-xl bg-black/40 border border-amber-500/30 p-4 sm:p-5">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-palette text-amber-400"></i>
+                                    <h4 class="font-title font-bold text-sm sm:text-base text-amber-200 uppercase tracking-wider">
+                                        Họa Quyển Minh Họa Chương (Ảnh Kèm Theo)
+                                    </h4>
+                                    <span id="chapter-img-count-badge" class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300">2 ảnh</span>
+                                </div>
+                                <button onclick="openQuickMediaModal('image')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/40 flex items-center gap-1.5 transition">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i> + Nạp Thêm Ảnh Chương
+                                </button>
+                            </div>
+
+                            <!-- Grid Ảnh Minh Họa Chương -->
+                            <div id="chapter-illustrations-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- Rendered by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Nội dung chữ của chương -->
+                        <div id="chapter-text-content" class="story-content font-serif leading-relaxed space-y-5 text-[19px]">
+                            <!-- Paragraphs rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- [PHẦN CUỐI CHƯƠNG / CAO TRÀO]: CINEMATIC VIDEO & CUTSCENE -->
+                    <footer class="pt-8 border-t border-amber-500/25 space-y-6">
+                        <div class="rounded-2xl bg-gradient-to-b from-[#160f24]/95 to-[#090a10]/95 border border-purple-500/40 p-5 sm:p-6 shadow-[0_0_30px_rgba(147,51,234,0.15)]">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-400/50 flex items-center justify-center text-purple-300">
+                                        <i class="fa-solid fa-clapperboard text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <h4 class="font-title font-bold text-base sm:text-lg text-purple-200 uppercase tracking-wider">
+                                                Thiên Cơ Ảnh Kính • Video Cao Trào Cuối Chương
+                                            </h4>
+                                            <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/25 text-purple-200 border border-purple-400/30 font-semibold">
+                                                Climax Cutscene
+                                            </span>
+                                        </div>
+                                        <p id="video-caption-display" class="text-xs text-slate-400">
+                                            Thưởng thức đoạn phim đại chiến / CG minh họa cao trào sau khi đọc xong chương truyện
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <button onclick="openQuickMediaModal('video')" class="px-3.5 py-2 rounded-lg text-xs font-bold bg-purple-500/25 hover:bg-purple-500/35 text-purple-200 border border-purple-400/50 flex items-center gap-1.5 transition">
+                                    <i class="fa-solid fa-video"></i> + Nạp Link Video / YouTube / MP4
+                                </button>
+                            </div>
+
+                            <!-- Khung Hiển Thị Video / YouTube / Hoạt Cảnh Cổ Phong -->
+                            <div id="chapter-video-container" class="rounded-xl overflow-hidden border border-purple-500/30 bg-black relative">
+                                <!-- Rendered by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Điều hướng chuyển chương ở cuối trang -->
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                            <button onclick="navigateChapter(-1)" class="px-5 py-3 rounded-xl bg-slate-800/90 hover:bg-amber-500/20 text-slate-200 hover:text-amber-300 border border-slate-700 font-bold text-sm flex items-center gap-2 transition">
+                                <i class="fa-solid fa-arrow-left"></i> Chương Trước
+                            </button>
+
+                            <button onclick="openChapterModal('add')" class="px-5 py-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 font-bold text-sm flex items-center gap-2 transition">
+                                <i class="fa-solid fa-file-circle-plus"></i> + Nạp Chương Tiếp Theo
+                            </button>
+
+                            <button onclick="navigateChapter(1)" class="px-5 py-3 rounded-xl btn-ancient-gold text-sm flex items-center gap-2">
+                                Chương Tiếp Theo <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             PHẦN 2: TRANG THẦN VỊ (BẢNG PHONG THẦN - CELESTIAL RPG SHOWCASE)
+             ===================================================================== -->
+        <section id="section-thanvi" class="hidden space-y-6">
+            
+            <!-- Banner Bảng Phong Thần -->
+            <div class="divine-card rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+                <div class="
+                    absolute -right-10 -top-10 w-64 h-64 rounded-full bg-amber-400/15 blur-3xl pointer-events-none"></div>
+                <div class="flex flex-wrap items-center justify-between gap-4 relative z-10">
+                    <div class="space-y-1.5">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-sun"></i> Cửu Thiên Thần Giới • Bảng Phong Thần
+                        </div>
+                        <h2 class="font-title font-extrabold text-2xl sm:text-4xl text-amber-200 divine-glow-text tracking-wide">
+                            THÁI CỔ CHƯ THẦN LỤC (THẦN VỊ)
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                            Hệ thống giám định căn cốt, Thần Lực, Thần Thức và Lục Giác Năng Lực của các bậc Chí Tôn Thần Vị. Bạn có thể nạp hình ảnh và thiết lập chỉ số Thần Vị mới bất kỳ lúc nào.
+                        </p>
+                    </div>
+
+                    <button onclick="openCharacterModal('thanvi')" class="px-5 py-3 rounded-xl btn-ancient-gold text-sm flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-plus-circle text-base"></i> Nạp Hình & Hồ Sơ Thần Vị
+                    </button>
+                </div>
+            </div>
+
+            <!-- Giao Diện RPG Character Inspector (Trái: Danh sách Thần Vị | Giữa: Chân Dung | Phải: Biểu Đồ Chỉ Số & Hồ Sơ) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                
+                <!-- Cột Trái (3 cols): Danh sách thẻ Thần Vị -->
+                <div class="lg:col-span-3 space-y-3">
+                    <div class="flex items-center justify-between px-1">
+                        <h3 class="font-title font-bold text-sm uppercase tracking-wider text-amber-300">
+                            <i class="fa-solid fa-chess-king mr-1.5"></i> Danh Sách Thần Vị
+                        </h3>
+                        <button onclick="openCharacterModal('thanvi')" class="text-xs text-amber-400 hover:underline font-semibold">+ Thêm mới</button>
+                    </div>
+                    <div id="thanvi-roster-list" class="space-y-3 max-h-[680px] overflow-y-auto pr-1">
+                        <!-- Character cards rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Cột Giữa & Phải (9 cols): Sân Khấu Chi Tiết Nhân Vật Thần Vị -->
+                <div id="thanvi-inspector" class="lg:col-span-9 divine-card rounded-2xl p-5 sm:p-7 relative overflow-hidden">
+                    <!-- Rendered dynamically by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             PHẦN 3: TRANG MA VỊ (VẠN MA ĐIỆN - ABYSSAL DEMON RPG SHOWCASE)
+             ===================================================================== -->
+        <section id="section-mavi" class="hidden space-y-6">
+            
+            <!-- Banner Vạn Ma Điện -->
+            <div class="demonic-card rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-64 h-64 rounded-full bg-rose-600/20 blur-3xl pointer-events-none"></div>
+                <div class="flex flex-wrap items-center justify-between gap-4 relative z-10">
+                    <div class="space-y-1.5">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 border border-rose-400/50 text-rose-300 text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-fire-flame-Simple"></i> Cửu U Vực Thẳm • Vạn Ma Điện
+                        </div>
+                        <h2 class="font-title font-extrabold text-2xl sm:text-4xl text-rose-200 demonic-glow-text tracking-wide">
+                            CỬU U VẠN MA LỤC (MA VỊ)
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                            Nơi khắc tên những bậc Cổ Ma Chí Tôn nghịch thiên hành đạo. Hiển thị trực quan Sát Khí, Huyết Mạch, Ma Lực và biểu đồ chiến lực lục giác chuẩn RPG.
+                        </p>
+                    </div>
+
+                    <button onclick="openCharacterModal('mavi')" class="px-5 py-3 rounded-xl btn-ancient-crimson text-sm flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-skull-crossbones text-base"></i> Nạp Hình & Hồ Sơ Ma Vị
+                    </button>
+                </div>
+            </div>
+
+            <!-- Giao Diện RPG Character Inspector Cho Ma Vị -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                
+                <!-- Cột Trái (3 cols): Danh sách thẻ Ma Vị -->
+                <div class="lg:col-span-3 space-y-3">
+                    <div class="flex items-center justify-between px-1">
+                        <h3 class="font-title font-bold text-sm uppercase tracking-wider text-rose-400">
+                            <i class="fa-solid fa-dragon mr-1.5"></i> Danh Sách Ma Vị
+                        </h3>
+                        <button onclick="openCharacterModal('mavi')" class="text-xs text-rose-400 hover:underline font-semibold">+ Thêm mới</button>
+                    </div>
+                    <div id="mavi-roster-list" class="space-y-3 max-h-[680px] overflow-y-auto pr-1">
+                        <!-- Demonic cards rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Cột Giữa & Phải (9 cols): Sân Khấu Chi Tiết Nhân Vật Ma Vị -->
+                <div id="mavi-inspector" class="lg:col-span-9 demonic-card rounded-2xl p-5 sm:p-7 relative overflow-hidden">
+                    <!-- Rendered dynamically by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER CỔ PHONG -->
+    <footer class="relative z-10 border-t border-amber-500/20 bg-[#06070b]/90 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+                <span class="text-amber-400 font-title font-bold">THÁI CỔ THẦN MA LỤC</span>
+                <span>— Hệ thống đọc truyện & Hồ sơ Thần Vị / Ma Vị RPG</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="switchMainTab('reader')" class="hover:text-amber-300">Tàng Kinh Các</button>
+                <button onclick="switchMainTab('thanvi')" class="hover:text-amber-300">Bảng Phong Thần</button>
+                <button onclick="switchMainTab('mavi')" class="hover:text-rose-400">Vạn Ma Điện</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         HỆ THỐNG MODALS: NẠP HÌNH & HỒ SƠ THẦN/MA VỊ, NẠP TEXT TRUYỆN, NẠP MEDIA
+         ========================================================================= -->
+
+    <!-- 1. MODAL NẠP HÌNH & HỒ SƠ THẦN VỊ / MA VỊ -->
+    <div id="modal-character" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="ancient-card rounded-2xl max-w-3xl w-full p-6 sm:p-8 max-h-[92vh] overflow-y-auto border border-amber-500/50 space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center gap-3">
+                    <div id="char-modal-icon" class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400 flex items-center justify-center text-amber-300">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div>
+                        <h3 id="char-modal-title" class="font-title font-extrabold text-xl text-amber-300">
+                            NẠP HÌNH & HỒ SƠ THẦN VỊ
+                        </h3>
+                        <p class="text-xs text-slate-400">Tải ảnh từ máy hoặc dán link ảnh, thiết lập danh hiệu và kéo thanh chỉ số RPG</p>
+                    </div>
+                </div>
+                <button onclick="closeModal('modal-character')" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="form-character" onsubmit="saveCharacterProfile(event)" class="space-y-5">
+                <input type="hidden" id="char-edit-id" value="">
+
+                <!-- Chọn Phân Loại: Thần Vị hay Ma Vị -->
+                <div class="grid grid-cols-2 gap-3 bg-slate-900/90 p-1.5 rounded-xl border border-slate-800">
+                    <button type="button" id="btn-faction-thanvi" onclick="setCharModalFaction('thanvi')" class="py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-2 bg-amber-500/25 text-amber-300 border border-amber-400/50">
+                        <i class="fa-solid fa-sun"></i> Bảng Phong Thần (Thần Vị)
+                    </button>
+                    <button type="button" id="btn-faction-mavi" onclick="setCharModalFaction('mavi')" class="py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-2 text-slate-400 hover:text-rose-300">
+                        <i class="fa-solid fa-fire-flame-curved"></i> Vạn Ma Điện (Ma Vị)
+                    </button>
+                </div>
+
+                <!-- Khu vực Nạp Hình Nhân Vật (Tải File hoặc Dán URL) -->
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center bg-black/40 p-4 rounded-xl border border-slate-800">
+                    <div class="sm:col-span-4 flex flex-col items-center">
+                        <div class="w-36 h-48 rounded-xl overflow-hidden border-2 border-amber-400/50 bg-slate-900 relative">
+                            <img id="char-preview-img" src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80" alt="Preview" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-8 space-y-3">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-amber-300">
+                            <i class="fa-solid fa-image mr-1"></i> Nạp Hình Ảnh Nhân Vật (Từ thiết bị hoặc Link)
+                        </label>
+                        <div class="flex flex-wrap gap-2">
+                            <label class="cursor-pointer px-4 py-2 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/50 text-xs font-bold flex items-center gap-2 transition">
+                                <i class="fa-solid fa-upload"></i> Chọn Ảnh Từ Máy
+                                <input type="file" accept="image/*" class="hidden" onchange="handleImageFileUpload(event, 'char-image-url', 'char-preview-img')">
+                            </label>
+                            <button type="button" onclick="pickSamplePortrait()" class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Đổi Ảnh Mẫu Cổ Phong
+                            </button>
+                        </div>
+                        <div>
+                            <input type="text" id="char-image-url" oninput="updateImagePreview(this.value, 'char-preview-img')" placeholder="Hoặc dán trực tiếp link ảnh (URL) vào đây..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-amber-400">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông tin Danh Hiệu, Thần/Ma Vị, Cảnh Giới -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Tên Nhân Vật *</label>
+                        <input type="text" id="char-name" required placeholder="VD: Đế Thích Thiên / Huyết Ma Lão Tổ" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label id="label-char-title" class="block text-xs font-semibold text-slate-300 mb-1">Danh Hiệu / Phong Hiệu *</label>
+                        <input type="text" id="char-title" required placeholder="VD: Cửu Thiên Lôi Đế / Vạn Kiếp Ma Tôn" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label id="label-char-rank" class="block text-xs font-semibold text-slate-300 mb-1">Thần Vị / Ma Vị Chính Thức *</label>
+                        <input type="text" id="char-rank" required placeholder="VD: Thái Cổ Chí Tôn Thần Vị" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Cảnh Giới Tu Vi *</label>
+                        <input type="text" id="char-realm" required placeholder="VD: Bán Bước Siêu Thoát / Thần Vương Đỉnh Phong" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Thần Khí / Bản Mệnh Pháp Bảo</label>
+                        <input type="text" id="char-weapon" placeholder="VD: Thái Cực Hỗn Độn Kiếm" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Phẩm Cấp Tư Chất (Tier)</label>
+                        <select id="char-tier" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-amber-300 font-bold focus:border-amber-400 focus:outline-none">
+                            <option value="EX">EX — Siêu Thoát Chư Thiên</option>
+                            <option value="SSS+" selected>SSS+ — Thái Cổ Chí Tôn</option>
+                            <option value="SSS">SSS — Vô Thượng Chân Thần/Ma</option>
+                            <option value="SS+">SS+ — Chưởng Khống Pháp Tắc</option>
+                            <option value="SS">SS — Đỉnh Phong Đại Năng</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 6 Thanh Trượt Chỉ Số RPG (0 - 1000) -->
+                <div class="bg-black/45 p-4 rounded-xl border border-slate-800 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-300">
+                            <i class="fa-solid fa-chart-radar mr-1"></i> Thiết Lập 6 Chỉ Số Năng Lực (0 - 1000)
+                        </span>
+                        <span class="text-xs text-slate-400">Tổng Chiến Lực: <strong id="char-modal-total-power" class="text-amber-400">5600</strong></span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span id="stat-label-0" class="text-slate-300 font-medium">Thần Lực</span>
+                                <span id="stat-val-0" class="text-amber-400 font-bold">950</span>
+                            </div>
+                            <input type="range" id="stat-input-0" min="100" max="1000" step="10" value="950" oninput="updateStatSliderPreview()" class="w-full accent-amber-500">
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span id="stat-label-1" class="text-slate-300 font-medium">Công Kích</span>
+                                <span id="stat-val-1" class="text-amber-400 font-bold">960</span>
+                            </div>
+                            <input type="range" id="stat-input-1" min="100" max="1000" step="10" value="960" oninput="updateStatSliderPreview()" class="w-full accent-amber-500">
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span id="stat-label-2" class="text-slate-300 font-medium">Phòng Ngự</span>
+                                <span id="stat-val-2" class="text-amber-400 font-bold">900</span>
+                            </div>
+                            <input type="range" id="stat-input-2" min="100" max="1000" step="10" value="900" oninput="updateStatSliderPreview()" class="w-full accent-amber-500">
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span id="stat-label-3" class="text-slate-300 font-medium">Thần Thức</span>
+                                <span id="stat-val-3" class="text-amber-400 font-bold">940</span>
+                            </div>
+                            <input type="range" id="stat-input-3" min="100" max="1000" step="10" value="940" oninput="updateStatSliderPreview()" class="w-full accent-amber-500">
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span id="stat-label-4" class="text-slate-300 font-medium">Tốc Độ</span>
+                                <span id="stat-val-4" class="text-amber-400 font-bold">920</span>
+                            </div>
+                            <input type="range" id="stat-input-4" min="100" max="1000" step="10" value="920" oninput="updateStatSliderPreview()" class="w-full accent-amber-500">
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span id="stat-label-5" class="text-slate-300 font-medium">Khí Vận</span>
+                                <span id="stat-val-5" class="text-amber-400 font-bold">930</span>
+                            </div>
+                            <input type="range" id="stat-input-5" min="100" max="1000" step="10" value="930" oninput="updateStatSliderPreview()" class="w-full accent-amber-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiểu sử & Tuyệt kỹ -->
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Tiểu Sử / Truyền Thuyết Nhân Vật</label>
+                        <textarea id="char-lore" rows="3" placeholder="Nhập tiểu sử, lai lịch, chiến tích hiển hách của vị Thần / Ma này..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg p-3 text-sm text-slate-200 focus:border-amber-400 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Thần Thông / Ma Công Tuyệt Kỹ (Mỗi chiêu thức cách nhau dấu chấm phẩy `;`)</label>
+                        <input type="text" id="char-skills" placeholder="VD: Cửu Thiên Thần Lôi Quyết; Vạn Kiếm Quy Tông; Thái Sơ Tịnh Thế Liên" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-800">
+                    <button type="button" onclick="closeModal('modal-character')" class="px-4 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-bold hover:bg-slate-700">
+                        Hủy Bỏ
+                    </button>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl btn-ancient-gold text-xs sm:text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-floppy-disk"></i> Lưu Hồ Sơ Lên Bảng
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. MODAL NẠP TEXT TRUYỆN / THÊM HOẶC SỬA CHƯƠNG -->
+    <div id="modal-chapter" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="ancient-card rounded-2xl max-w-3xl w-full p-6 sm:p-8 max-h-[92vh] overflow-y-auto border border-amber-500/50 space-y-5">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div>
+                    <h3 id="chapter-modal-heading" class="font-title font-extrabold text-xl text-amber-300">
+                        NẠP TEXT TRUYỆN & ĐA PHƯƠNG TIỆN CHƯƠNG
+                    </h3>
+                    <p class="text-xs text-slate-400">Dán văn bản truyện nhanh gọn, kèm tùy chọn ảnh minh họa, link podcast và video cuối chương</p>
+                </div>
+                <button onclick="closeModal('modal-chapter')" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="form-chapter" onsubmit="saveChapterData(event)" class="space-y-4">
+                <input type="hidden" id="chapter-modal-mode" value="add">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Số Chương / Nhãn *</label>
+                        <input type="text" id="chap-input-order" required placeholder="VD: Chương 4" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-amber-300 font-bold focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Tiêu Đề Chương *</label>
+                        <input type="text" id="chap-input-title" required placeholder="VD: Đại Chiến Đỉnh Côn Luân — Thần Maẫn Lạc" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-1">
+                        <label class="text-xs font-semibold text-slate-300">Nội Dung Text Truyện * (Xuống dòng để tách đoạn)</label>
+                        <button type="button" onclick="insertSampleParagraph()" class="text-xs text-amber-400 hover:underline">
+                            + Chèn đoạn văn mẫu cổ phong
+                        </button>
+                    </div>
+                    <textarea id="chap-input-content" required rows="8" placeholder="Dán toàn bộ nội dung văn bản của chương truyện vào đây..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-xl p-3.5 text-sm text-slate-200 font-serif leading-relaxed focus:border-amber-400 focus:outline-none"></textarea>
+                </div>
+
+                <!-- Đính kèm Podcast, Ảnh và Video ngay khi tạo/sửa chương -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-black/40 p-4 rounded-xl border border-slate-800">
+                    <div>
+                        <label class="block text-xs font-bold text-teal-300 mb-1">
+                            <i class="fa-solid fa-podcast mr-1"></i> Link Podcast / Audio Đầu Chương
+                        </label>
+                        <input type="text" id="chap-input-podcast" placeholder="Link MP3, Spotify, YouTube hoặc tải file..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-teal-400 focus:outline-none">
+                        <label class="inline-flex items-center gap-1.5 mt-1.5 text-[11px] text-teal-400 cursor-pointer hover:underline">
+                            <i class="fa-solid fa-upload"></i> Hoặc chọn file âm thanh từ máy
+                            <input type="file" accept="audio/*" class="hidden" onchange="handleMediaFileUpload(event, 'chap-input-podcast')">
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-purple-300 mb-1">
+                            <i class="fa-solid fa-film mr-1"></i> Link Video Cao Trào Cuối Chương
+                        </label>
+                        <input type="text" id="chap-input-video" placeholder="Link YouTube (watch?v=...) hoặc MP4..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-purple-400 focus:outline-none">
+                        <label class="inline-flex items-center gap-1.5 mt-1.5 text-[11px] text-purple-400 cursor-pointer hover:underline">
+                            <i class="fa-solid fa-upload"></i> Hoặc chọn file Video (MP4) từ máy
+                            <input type="file" accept="video/*" class="hidden" onchange="handleMediaFileUpload(event, 'chap-input-video')">
+                        </label>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-amber-300 mb-1">
+                            <i class="fa-solid fa-images mr-1"></i> Ảnh Minh Họa Kèm Theo Chương (Link URL hoặc tải ảnh từ máy)
+                        </label>
+                        <div class="flex flex-wrap gap-2">
+                            <input type="text" id="chap-input-image" placeholder="Dán link ảnh minh họa cho chương..." class="flex-1 bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none">
+                            <label class="cursor-pointer px-3 py-2 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold flex items-center gap-1.5">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> Tải Ảnh Lên
+                                <input type="file" accept="image/*" class="hidden" onchange="handleImageFileUpload(event, 'chap-input-image')">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-800">
+                    <button type="button" onclick="closeModal('modal-chapter')" class="px-4 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-bold hover:bg-slate-700">
+                        Đóng
+                    </button>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl btn-ancient-gold text-xs sm:text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-check-double"></i> Lưu Vào Tàng Kinh Các
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3. MODAL NẠP NHANH PODCAST / ẢNH CHƯƠNG / VIDEO CHO CHƯƠNG HIỆN TẠI -->
+    <div id="modal-quick-media" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="ancient-card rounded-2xl max-w-lg w-full p-6 border border-amber-500/50 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 id="quick-media-title" class="font-title font-bold text-lg text-amber-300">
+                    NẠP MEDIA VÀO CHƯƠNG
+                </h3>
+                <button onclick="closeModal('modal-quick-media')" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form onsubmit="saveQuickMedia(event)" class="space-y-4">
+                <input type="hidden" id="quick-media-type" value="podcast">
+
+                <div>
+                    <label id="quick-media-label" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                        Dán đường dẫn (URL) hoặc tải tệp từ máy:
+                    </label>
+                    <input type="text" id="quick-media-url" required placeholder="https://..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Tiêu đề / Chú thích hiển thị:</label>
+                    <input type="text" id="quick-media-caption" placeholder="VD: Podcast dẫn truyện chương 1 / Đại chiến Thương Khung..." class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3.5 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                </div>
+
+                <div class="flex items-center justify-between bg-black/40 p-3 rounded-xl border border-slate-800">
+                    <span class="text-xs text-slate-400">Hoặc chọn tệp trực tiếp từ máy tính/điện thoại:</span>
+                    <label class="cursor-pointer px-3.5 py-2 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/50 text-xs font-bold flex items-center gap-1.5">
+                        <i class="fa-solid fa-folder-open"></i> Chọn Tệp
+                        <input type="file" id="quick-media-file-input" class="hidden" onchange="handleQuickFileSelect(event)">
+                    </label>
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeModal('modal-quick-media')" class="px-4 py-2 rounded-lg bg-slate-800 text-xs font-bold text-slate-300">Hủy</button>
+                    <button type="submit" class="px-5 py-2 rounded-lg btn-ancient-gold text-xs font-bold">Xác Nhận Nạp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. MODAL ĐỔI ẢNH BÌA & THÔNG TIN TRUYỆN -->
+    <div id="modal-cover" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="ancient-card rounded-2xl max-w-lg w-full p-6 border border-amber-500/50 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="font-title font-bold text-lg text-amber-300">
+                    <i class="fa-solid fa-book-sparkles mr-1.5"></i> ĐỔI ẢNH BÌA & THÔNG TIN TRUYỆN
+                </h3>
+                <button onclick="closeModal('modal-cover')" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form onsubmit="saveNovelCoverAndInfo(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Link Ảnh Bìa Truyện (Hoặc tải từ máy bên dưới)</label>
+                    <div class="flex gap-2">
+                        <input type="text" id="cover-input-url" required class="flex-1 bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none">
+                        <label class="cursor-pointer px-3 py-2 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-400/50 text-xs font-bold flex items-center gap-1">
+                            <i class="fa-solid fa-upload"></i> Tải Ảnh
+                            <input type="file" accept="image/*" class="hidden" onchange="handleImageFileUpload(event, 'cover-input-url')">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Tên Bộ Truyện</label>
+                    <input type="text" id="cover-input-title" required class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:border-amber-400 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Tác Giả</label>
+                        <input type="text" id="cover-input-author" required class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Hệ Thống Tu Luyện</label>
+                        <input type="text" id="cover-input-system" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Văn Án / Giới Thiệu Truyện</label>
+                    <textarea id="cover-input-synopsis" rows="3" class="w-full bg-[#0c0f17] border border-slate-700 rounded-lg p-3 text-xs text-slate-200 focus:border-amber-400 focus:outline-none"></textarea>
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeModal('modal-cover')" class="px-4 py-2 rounded-lg bg-slate-800 text-xs font-bold text-slate-300">Hủy</button>
+                    <button type="submit" class="px-5 py-2 rounded-lg btn-ancient-gold text-xs font-bold">Cập Nhật Bìa Truyện</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 5. LIGHTBOX PHÓNG TO ẢNH MINH HỌA & CHÂN DUNG THẦN/MA -->
+    <div id="modal-lightbox" onclick="closeModal('modal-lightbox')" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-xl flex flex-col items-center justify-center p-4 cursor-zoom-out">
+        <img id="lightbox-img" src="" alt="Zoomed Artwork" class="max-w-full max-h-[82vh] rounded-xl border-2 border-amber-400/50 shadow-[0_0_50px_rgba(0,0,0,0.9)] object-contain">
+        <p id="lightbox-caption" class="mt-3 text-sm font-title text-amber-200 tracking-wide text-center"></p>
+    </div>
+
+    <!-- 6. MODAL XÁC NHẬN KHÔI PHỤC MẶC ĐỊNH -->
+    <div id="modal-reset-confirm" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="ancient-card rounded-2xl max-w-md w-full p-6 border border-rose-500/50 space-y-4 text-center">
+            <div class="w-12 h-12 rounded-full bg-rose-500/20 border border-rose-500/50 text-rose-400 flex items-center justify-center mx-auto text-xl">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="font-title font-bold text-lg text-white">Khôi Phục Dữ Liệu Gốc?</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Thao tác này sẽ đưa các chương truyện, ảnh bìa, danh sách Thần Vị và Ma Vị về trạng thái mẫu ban đầu.
+            </p>
+            <div class="flex justify-center gap-3 pt-2">
+                <button onclick="closeModal('modal-reset-confirm')" class="px-4 py-2 rounded-lg bg-slate-800 text-xs font-bold text-slate-300">Giữ Lại</button>
+                <button onclick="confirmResetAllData()" class="px-5 py-2 rounded-lg btn-ancient-crimson text-xs font-bold">Đồng Ý Khôi Phục</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- =========================================================================
+         JAVASCRIPT ENGINE: QUẢN LÝ DỮ LIỆU, RENDER UI, BIỂU ĐỒ RADAR & ÂM THANH
+         ========================================================================= -->
+    <script>
+        const STORAGE_KEY = 'THAI_CO_THAN_MA_LUC_V1';
+
+        // Kho ảnh mẫu Cổ Phong chất lượng cao để người dùng có thể đổi nhanh
+        const SAMPLE_PORTRAITS = [
+            'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=900&q=80'
+        ];
+
+        // Dữ liệu mặc định ban đầu
+        const DEFAULT_DATA = {
+            novel: {
+                title: 'VẠN CỔ THẦN MA KỶ',
+                author: 'Thiên Cơ Lão Nhân',
+                genre: 'Thái Cổ Tiên Hiệp • Huyền Huyễn',
+                status: 'Đang Lên Chương',
+                system: 'Thần Đạo & Ma Đạo Song Tu',
+                cover: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85',
+                synopsis: 'Một vạn năm trước, Chư Thần cùng Vạn Ma đại chiến tại đỉnh Thái Cổ Côn Luân khiến thiên đạo băng liệt, Bảng Phong Thần và Vạn Ma Điện đồng loạt thất lạc. Thiếu niên Diệp Trần từ phàm giới bước ra, tay trái nắm Thái Sơ Thần Ấn, tay phải cầm Cửu U Ma Kiếm, từng bước lập lại trật tự Thần Vị — Ma Vị khắp chư thiên vạn giới!'
+            },
+            chapters: [
+                {
+                    id: 'chap-1',
+                    order: 'Chương 1',
+                    title: 'Thái Cổ Thần Ma Bảng Hiện Thế',
+                    podcastUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                    podcastTitle: 'Podcast Thính Thư Chương 1 — Huyền Âm Cổ Cầm Dẫn Truyện',
+                    illustrations: [
+                        {
+                            url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
+                            caption: 'Thái Cổ Côn Luân Sơn nơi Bảng Phong Thần giáng thế trong đêm huyết nguyệt'
+                        },
+                        {
+                            url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
+                            caption: 'Kim quang vạn trượng từ Cửu Thiên Thần Giới chiếu rọi xuống phàm trần'
+                        }
+                    ],
+                    content: `Gió lạnh như đao gào thét trên đỉnh Thái Cổ Côn Luân. Giữa tầng mây đen đặc quánh như mực, chín vầng thần nhật bỗng nhiên đồng loạt nổ tung, hóa thành một bức cổ quyển khổng lồ trải dài ba vạn dặm ngang qua bầu trời.
+
+Trên nửa bên trái của cổ quyển, kim quang chói lọi khắc sâu ba chữ lớn bằng cổ tự Tiên Thiên: "BẢNG PHONG THẦN". Mỗi một nét chữ đều ẩn chứa uy áp của chư thiên thần linh, khiến vạn thú trong sơn mạch đồng loạt quỳ rạp xuống đất.
+
+Thế nhưng, ngay ở nửa bên phải đối diện, huyết diễm滔 thiên lại cuồn cuộn bốc lên, kết thành một tòa cung điện u tối mang tên "VẠN MA ĐIỆN". Sát khí từ vạn cổ trước tràn về như thủy triều, nhuộm đỏ cả một vùng tuyết trắng Côn Luân.
+
+Diệp Trần đứng trên mỏm đá chênh vênh, tà áo trắng phần phật trong gió lốc. Đôi mắt thiếu niên phản chiếu cả kim quang thần thánh lẫn hắc diễm tà mị. Trong thức hải của hắn, thanh âm già nua của Thiên Cơ Lão Tổ vang vọng: "Thần vị định càn khôn, Ma vị nghịch sinh tử. Kẻ nào ghi danh lên hai bảng này, kẻ đó sẽ nắm giữ vận mệnh của cả kỷ nguyên mới!"`,
+                    videoUrl: '',
+                    videoCaption: 'Hoạt cảnh CG: Cửu Thiên Thần Quang đối đầu Cửu U Ma Diễm trên đỉnh Côn Luân'
+                },
+                {
+                    id: 'chap-2',
+                    order: 'Chương 2',
+                    title: 'Cửu Thiên Lôi Đế & Vạn Kiếp Ma Tôn',
+                    podcastUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+                    podcastTitle: 'Podcast Chương 2 — Bản Giao Hưởng Lôi Đình & Huyết Hải',
+                    illustrations: [
+                        {
+                            url: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1000&q=80',
+                            caption: 'Lôi Đế Cửu Thiên giáng lâm cùng vạn đạo thiên lôi tím ngắt'
+                        },
+                        {
+                            url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80',
+                            caption: 'Vạn Kiếp Ma Tôn bước ra từ Huyết Hải Vô Biên'
+                        }
+                    ],
+                    content: `Khi Bảng Phong Thần vừa mở ra trang đầu tiên, cả bầu trời phía Đông bỗng nhiên rền vang tiếng sấm chấn động cửu tiêu. Một bóng người khoác chiến giáp hoàng kim bước ra từ hư không, sau lưng là pháp tướng thần minh cao ngàn trượng.
+
+Đó chính là Cửu Thiên Tư Mệnh Lôi Đế — vị cổ thần nắm giữ thần phạt chi lực đứng đầu Thần Vị. Chỉ một ánh mắt của ngài quét qua, hư không liền nứt toạc thành từng khe vực sâu thẳm.
+
+Cùng lúc ấy, từ dưới đáy Cửu U Vực Thẳm, một tiếng cười khàn đặc mang theo uy áp hủy thiên diệt địa vang lên. Huyết hải dâng trào, Vạn Kiếp Huyết Ma Đế đạp lên xương cốt của vạn tộc chậm rãi bước lên bầu trời, đối diện trực tiếp với Lôi Đế.
+
+Hai cự đầu của Thần Vị và Ma Vị vừa chạm mặt, thiên địa lập tức biến sắc. Diệp Trần nín thở, vận chuyển Thái Sơ Linh Quyết trong cơ thể để chống đỡ dư chấn kinh hoàng từ cuộc đối đầu đỉnh cao này!`,
+                    videoUrl: '',
+                    videoCaption: 'Cutscene Cao Trào: Lôi Đế quyết chiến Huyết Ma Đế giữa tinh không'
+                },
+                {
+                    id: 'chap-3',
+                    order: 'Chương 3',
+                    title: 'Thức Tỉnh Song Sinh Thần Ma Ấn',
+                    podcastUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+                    podcastTitle: 'Podcast Chương 3 — Khúc Ca Phá Kén Hóa Thần',
+                    illustrations: [
+                        {
+                            url: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=80',
+                            caption: 'Song Sinh Thần Ma Ấn bừng sáng giữa lòng bàn tay Diệp Trần'
+                        }
+                    ],
+                    content: `Giữa tâm bão năng lượng của Thần và Ma, một tia tiên thiên bản nguyên bất ngờ bắn thẳng về phía vách đá nơi Diệp Trần đang đứng. Không kịp lùi lại, lồng ngực hắn nóng rực như có một lò luyện đan thái cổ vừa bùng cháy.
+
+Bên lòng bàn tay trái của Diệp Trần hiện lên ấn ký hoa sen vàng rực rỡ — biểu tượng của Thái Sơ Thần Vị. Ngược lại, lòng bàn tay phải lại khắc sâu ấn ký ma long đỏ thẫm của Vạn Ma Điện.
+
+"Từ vạn cổ đến nay, chưa từng có ai đồng thời dung chứa cả Thần Lực tinh thuần lẫn Ma Khí bá đạo!" Cửu Thiên Lôi Đế kinh ngạc nhìn xuống thiếu niên phàm trần.
+
+Diệp Trần ngẩng đầu, mái tóc đen dài tung bay. Hắn rút thanh cổ kiếm sau lưng, chỉ thẳng lên thương khung: "Nếu thiên đạo đã chia Thần và Ma thành hai cực không đội trời chung, vậy hôm nay ta sẽ dùng thân xác này dung hợp cả hai, mở ra Thần Ma Đại Đạo của riêng mình!"`,
+                    videoUrl: '',
+                    videoCaption: 'CG Cuối Chương: Diệp Trần thức tỉnh Song Sinh Thần Ma Pháp Tướng'
+                }
+            ],
+            thanvi: [
+                {
+                    id: 'tv-1',
+                    name: 'Đế Thích Thiên Tôn',
+                    title: 'Cửu Thiên Tư Mệnh Lôi Đế',
+                    rank: 'Thái Cổ Chí Tôn Thần Vị (Đệ Nhất Khung)',
+                    realm: 'Chân Thần Đỉnh Phong • Bán Bước Siêu Thoát',
+                    weapon: 'Thái Sơ Lôi Phạt Thần Thương',
+                    tier: 'EX',
+                    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=85',
+                    stats: [990, 980, 940, 970, 960, 950], // Thần Lực, Công Kích, Phòng Ngự, Thần Thức, Tốc Độ, Khí Vận
+                    lore: 'Đứng đầu Bảng Phong Thần từ kỷ nguyên Thái Cổ. Ngài sinh ra từ đạo thiên lôi đầu tiên khi khai thiên lập địa, chưởng quản hình phạt của chư thiên vạn giới, một thương vung ra có thể chém đứt tinh hà.',
+                    skills: ['Cửu Tiêu Thần Lôi Diệt Thế', 'Thiên Đạo Pháp Nhãn', 'Vạn Lôi Hóa Long Trận', 'Bất Diệt Kim Thân Quyết']
+                },
+                {
+                    id: 'tv-2',
+                    name: 'Dao Trì Thánh Mẫu',
+                    title: 'Tịnh Thế Hồng Liên Nữ Đế',
+                    rank: 'Chưởng Khống Sinh Mệnh Thần Vị',
+                    realm: 'Thần Vương Viên Mãn',
+                    weapon: 'Thập Nhị Phẩm Tạo Hóa Thanh Liên',
+                    tier: 'SSS+',
+                    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=85',
+                    stats: [970, 890, 980, 990, 930, 990],
+                    lore: 'Nữ Đế trấn giữ瑤 Trì Tiên Cảnh, lấy sen xanh tịnh hóa vạn cổ tà ma. Thần thức của nàng bao phủ ba ngàn đại thế giới, một niệm nở hoa, một niệm cải tử hoàn sinh.',
+                    skills: ['Hồng Liên Tịnh Thế Ca', 'Vạn Pháp Bất Xâm Kim Liên', 'Thiên Âm Độ Hóa Thuật', 'Thời Không Tiên Linh Kính']
+                },
+                {
+                    id: 'tv-3',
+                    name: 'Kiếm Trần Tử',
+                    title: 'Thái Bạch Tru Tiên Kiếm Thần',
+                    rank: 'Chấp Chưởng Sát Phạt Thần Vị',
+                    realm: 'Thần Hoàng Đỉnh Phong',
+                    weapon: 'Thái Hư Hạo Thiên Kiếm',
+                    tier: 'SSS',
+                    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85',
+                    stats: [940, 1000, 870, 950, 990, 910],
+                    lore: 'Một kiếm tu bước lên Bảng Phong Thần thuần túy bằng kiếm đạo. Từng một mình một kiếm trấn giữ Thiên Môn suốt ba trăm năm, chém rơi bảy vị Cổ Ma Vương.',
+                    skills: ['Nhất Kiếm Khai Thiên Môn', 'Vạn Kiếm Quy Tông Tuyệt', 'Thái Bạch Kiếm Vực', 'Trảm Thần Bạt Kiếm Thuật']
+                }
+            ],
+            mavi: [
+                {
+                    id: 'mv-1',
+                    name: 'La Hầu Ma Tổ',
+                    title: 'Vạn Kiếp Phệ Thiên Ma Đế',
+                    rank: 'Khởi Nguyên Thủy Tổ Ma Vị',
+                    realm: 'Cổ Ma Chí Tôn • Bán Bước Siêu Thoát',
+                    weapon: 'Thí Thần Hắc Liên Thương',
+                    tier: 'EX',
+                    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=900&q=85',
+                    stats: [1000, 990, 960, 950, 980, 990], // Ma Lực, Sát Khí, Huyết Mạch, Thân Pháp, Tà Thuật, Hung Uy
+                    lore: 'Chúa tể tối cao của Vạn Ma Điện. Tương truyền nơi nào La Hầu Ma Tổ đi qua, nhật nguyệt đều mất đi ánh sáng, thần linh nghe danh đều kinh hãi.',
+                    skills: ['Phệ Thiên Ma Công', 'Cửu U Huyết Hải Trận', 'Thí Thần Nhất Kích', 'Vạn Ma Triều Bái Lệnh']
+                },
+                {
+                    id: 'mv-2',
+                    name: 'Huyết Cơ Minh Hậu',
+                    title: 'Bỉ Ngạn Mạn Châu Ma Nữ',
+                    rank: 'Hoàng Tuyền Nhiếp Hồn Ma Vị',
+                    realm: 'Ma Hoàng Viên Mãn',
+                    weapon: 'Huyết Tinh Nhiếp Hồn Tán',
+                    tier: 'SSS+',
+                    image: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=900&q=85',
+                    stats: [960, 950, 980, 990, 1000, 940],
+                    lore: 'Nở rộ giữa bờ Hoàng Tuyền Vong Xuyên, nàng dùng hương hoa Bỉ Ngạn dẫn dụ thần hồn của các cường giả vào vạn kiếp luân hồi không lối thoát.',
+                    skills: ['Bỉ Ngạn Huyết Hoa Trận', 'Cửu U Câu Hồn Khúc', 'Huyết Ảnh Phân Thân', 'Mộng Yểm Phệ Hồn Thuật']
+                },
+                {
+                    id: 'mv-3',
+                    name: 'U Minh Tuyệt Ảnh',
+                    title: 'Hư Không Ám Sát Ma Tôn',
+                    rank: 'Thẩm Phán Hắc Ám Ma Vị',
+                    realm: 'Ma Tôn Đỉnh Phong',
+                    weapon: 'Song Đao Đoạn Hồn Nhận',
+                    tier: 'SSS',
+                    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=900&q=85',
+                    stats: [930, 980, 910, 1000, 940, 960],
+                    lore: 'Kẻ ẩn mình trong bóng tối vĩnh hằng của Vạn Ma Điện. Không một ai biết diện mạo thật của hắn, bởi mọi kẻ từng nhìn thấy đao quang của hắn đều đã hóa thành tro bụi.',
+                    skills: ['Hư Không Thuấn Sát', 'Ám Ảnh Vô Hình Quyết', 'Đoạn Hồn Thất Tuyệt Đao', 'Hắc Ám Thiên Mạc']
+                }
+            ]
+        };
+
+        // Nhãn 6 chỉ số cho Thần Vị và Ma Vị
+        const STAT_LABELS = {
+            thanvi: ['Thần Lực', 'Công Kích', 'Phòng Ngự', 'Thần Thức', 'Tốc Độ', 'Khí Vận'],
+            mavi: ['Ma Lực', 'Sát Khí', 'Huyết Mạch', 'Thân Pháp', 'Tà Thuật', 'Hung Uy']
+        };
+
+        // Biến trạng thái toàn cục
+        let appData = null;
+        let currentTab = 'reader';
+        let currentChapterIndex = 0;
+        let selectedThanViId = null;
+        let selectedMaViId = null;
+        let activeCharSubTab = 'stats'; // 'stats' | 'lore' | 'skills'
+        let currentCharModalFaction = 'thanvi';
+        let readerFontSize = 19;
+        let samplePortraitIndex = 0;
+
+        // Trình phát nhạc Cổ Cầm Web Audio API tích hợp sẵn
+        let audioCtx = null;
+        let isBuiltinBgmPlaying = false;
+        let bgmInterval = null;
+
+        // =========================================================================
+        // KHỞI TẠO ỨNG DỤNG
+        // =========================================================================
+        window.onload = function () {
+            loadDataFromStorage();
+            initParticleCanvas();
+            renderAll();
+        };
+
+        function loadDataFromStorage() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    appData = JSON.parse(raw);
+                } else {
+                    appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+                    saveDataToStorage();
+                }
+            } catch (e) {
+                appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+            }
+            if (appData.thanvi.length > 0) selectedThanViId = appData.thanvi[0].id;
+            if (appData.mavi.length > 0) selectedMaViId = appData.mavi[0].id;
+        }
+
+        function saveDataToStorage() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+                updateHeaderBadges();
+            } catch (e) {
+                showToast('Dung lượng ảnh lớn, đã lưu tạm thời trong phiên làm việc!', 'amber');
+            }
+        }
+
+        function updateHeaderBadges() {
+            document.getElementById('badge-count-thanvi').textContent = appData.thanvi.length;
+            document.getElementById('badge-count-mavi').textContent = appData.mavi.length;
+            document.getElementById('novel-chapter-count').textContent = `${appData.chapters.length} Chương`;
+        }
+
+        function renderAll() {
+            updateHeaderBadges();
+            renderNovelHero();
+            renderChapterSelector();
+            renderCurrentChapter();
+            renderRoster('thanvi');
+            renderRoster('mavi');
+        }
+
+        // =========================================================================
+        // ĐIỀU HƯỚNG 3 CHUYÊN TRANG CHÍNH (ĐỌC TRUYỆN - THẦN VỊ - MA VỊ)
+        // =========================================================================
+        function switchMainTab(tabName) {
+            currentTab = tabName;
+            const sections = ['reader', 'thanvi', 'mavi'];
+            sections.forEach(s => {
+                const secEl = document.getElementById(`section-${s}`);
+                const navEl = document.getElementById(`nav-${s}`);
+                if (s === tabName) {
+                    secEl.classList.remove('hidden');
+                    if (s === 'mavi') {
+                        navEl.className = 'nav-tab-btn flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-gradient-to-r from-rose-600/30 to-purple-700/20 text-rose-300 border border-rose-500/60 shadow-[0_0_15px_rgba(225,29,72,0.3)]';
+                    } else {
+                        navEl.className = 'nav-tab-btn flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-gradient-to-r from-amber-500/25 to-yellow-600/15 text-amber-300 border border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.25)]';
+                    }
+                } else {
+                    secEl.classList.add('hidden');
+                    navEl.className = 'nav-tab-btn flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-slate-300 hover:text-amber-300 border border-transparent';
+                }
+            });
+
+            if (tabName === 'thanvi') renderCharacterInspector('thanvi');
+            if (tabName === 'mavi') renderCharacterInspector('mavi');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToReaderZone() {
+            document.getElementById('reader-zone').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // =========================================================================
+        // RENDER TRANG ĐỌC TRUYỆN (HERO BÌA TRUYỆN + BỐ CỤC CHƯƠNG THÔNG MINH)
+        // =========================================================================
+        function renderNovelHero() {
+            const n = appData.novel;
+            document.getElementById('novel-cover-img').src = n.cover;
+            document.getElementById('novel-title').textContent = n.title;
+            document.getElementById('novel-author').textContent = n.author;
+            document.getElementById('novel-genre-badge').textContent = n.genre;
+            document.getElementById('novel-status-badge').textContent = n.status;
+            document.getElementById('novel-system').textContent = n.system;
+            document.getElementById('novel-synopsis').textContent = n.synopsis;
+        }
+
+        function renderChapterSelector() {
+            const select = document.getElementById('chapter-select');
+            select.innerHTML = '';
+            appData.chapters.forEach((chap, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.textContent = `${chap.order}: ${chap.title}`;
+                if (idx === currentChapterIndex) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        function selectChapter(idx) {
+            currentChapterIndex = parseInt(idx, 10);
+            renderCurrentChapter();
+        }
+
+        function navigateChapter(direction) {
+            const nextIdx = currentChapterIndex + direction;
+            if (nextIdx >= 0 && nextIdx < appData.chapters.length) {
+                currentChapterIndex = nextIdx;
+                renderChapterSelector();
+                renderCurrentChapter();
+                scrollToReaderZone();
+            } else {
+                showToast(direction > 0 ? 'Bạn đang ở chương mới nhất! Hãy nhấn "+ Nạp Text" để thêm chương.' : 'Đây là chương đầu tiên!', 'amber');
+            }
+        }
+
+        function renderCurrentChapter() {
+            const chap = appData.chapters[currentChapterIndex];
+            if (!chap) return;
+
+            document.getElementById('chapter-Order-badge').textContent = chap.order;
+            document.getElementById('chapter-title-display').textContent = chap.title;
+
+            // Đếm số chữ
+            const wordCount = chap.content.trim().split(/\s+/).length;
+            const readMins = Math.max(1, Math.ceil(wordCount / 220));
+            document.getElementById('chapter-meta-display').innerHTML = `
+                <i class="fa-regular fa-clock mr-1"></i> Thời gian đọc ~${readMins} phút (${wordCount} chữ) • Có kèm Podcast, ${chap.illustrations ? chap.illustrations.length : 0} Ảnh minh họa & Video cuối chương
+            `;
+
+            // 1. Render Podcast Đầu Chương
+            renderPodcastZone(chap);
+
+            // 2. Render Ảnh Minh Họa Thân Chương
+            renderChapterIllustrations(chap);
+
+            // 3. Render Nội Dung Chữ
+            const textContainer = document.getElementById('chapter-text-content');
+            const paragraphs = chap.content.split(/\n+/).filter(p => p.trim().length > 0);
+            textContainer.innerHTML = paragraphs.map(p => `<p class="leading-relaxed">${escapeHtml(p)}</p>`).join('');
+
+            // 4. Render Video Cao Trào Cuối Chương
+            renderChapterVideoZone(chap);
+        }
+
+        function renderPodcastZone(chap) {
+            const titleEl = document.getElementById('podcast-title-display');
+            const container = document.getElementById('podcast-player-container');
+            titleEl.textContent = chap.podcastTitle || `Podcast dẫn truyện ${chap.order}: ${chap.title}`;
+
+            const url = (chap.podcastUrl || '').trim();
+            if (!url) {
+                container.innerHTML = `
+                    <div class="text-xs text-slate-400 italic py-2 flex items-center justify-between">
+                        <span>Chương này chưa gắn link file MP3/Podcast ngoài. Bạn có thể bấm "Phát Nhạc Cổ Cầm" ở góc phải hoặc nạp link mới.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            // Kiểm tra nếu là link YouTube hoặc Spotify
+            const ytId = extractYouTubeId(url);
+            if (ytId) {
+                container.innerHTML = `
+                    <div class="aspect-[16/5] max-h-36 rounded-lg overflow-hidden border border-teal-500/30">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                `;
+            } else if (url.includes('open.spotify.com')) {
+                const embedUrl = url.replace('open.spotify.com/', 'open.spotify.com/embed/');
+                container.innerHTML = `
+                    <iframe style="border-radius:12px" src="${embedUrl}" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="flex flex-col sm:flex-row items-center gap-3 bg-black/50 p-2.5 rounded-xl border border-teal-500/30">
+                        <audio controls class="w-full h-9 accent-teal-400" src="${url}">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="shrink-0 px-3 py-1.5 rounded-lg bg-teal-500/15 text-teal-300 text-xs font-semibold hover:bg-teal-500/25 border border-teal-500/30">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Mở Link
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        function renderChapterIllustrations(chap) {
+            const grid = document.getElementById('chapter-illustrations-grid');
+            const badge = document.getElementById('chapter-img-count-badge');
+            const list = chap.illustrations || [];
+            badge.textContent = `${list.length} ảnh`;
+
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-2 text-center py-6 text-xs text-slate-400">
+                        Chưa có tranh minh họa cho chương này. Hãy bấm "+ Nạp Thêm Ảnh Chương" để tải ảnh lên!
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = list.map((item, index) => `
+                <div class="group relative rounded-xl overflow-hidden border border-amber-500/35 bg-slate-950 shadow-lg cursor-zoom-in" onclick="openLightbox('${item.url}', '${escapeHtml(item.caption || chap.title)}')">
+                    <div class="aspect-[16/9] overflow-hidden">
+                        <img src="${item.url}" alt="Minh họa chương" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x450/111827/fbbf24?text=Tranh+Minh+Hoa+Co+Phong'">
+                    </div>
+                    <div class="p-3 bg-gradient-to-t from-black via-black/85 to-transparent flex items-center justify-between gap-2">
+                        <p class="text-xs text-amber-100/90 font-medium line-clamp-1">
+                            <i class="fa-solid fa-sparkles text-amber-400 mr-1"></i> ${escapeHtml(item.caption || `Minh họa ${chap.order} (#${index + 1})`)}
+                        </p>
+                        <span class="text-[10px] text-amber-400 shrink-0"><i class="fa-solid fa-magnifying-glass-plus"></i> Phóng to</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderChapterVideoZone(chap) {
+            const container = document.getElementById('chapter-video-container');
+            const captionEl = document.getElementById('video-caption-display');
+            captionEl.textContent = chap.videoCaption || `Đoạn phim cao trào cuối ${chap.order}: ${chap.title}`;
+
+            const url = (chap.videoUrl || '').trim();
+            const ytId = extractYouTubeId(url);
+
+            if (ytId) {
+                container.innerHTML = `
+                    <div class="aspect-video w-full">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `;
+            } else if (url) {
+                container.innerHTML = `
+                    <video controls class="w-full max-h-[460px] bg-black" src="${url}">
+                        Trình duyệt không hỗ trợ thẻ video.
+                    </video>
+                `;
+            } else {
+                // Hiển thị Hoạt Cảnh Cổ Phong Tương Tác (Interactive Ancient Cutscene Preview) khi chưa gắn link ngoài
+                const bgImg = (chap.illustrations && chap.illustrations[0]) ? chap.illustrations[0].url : appData.novel.cover;
+                container.innerHTML = `
+                    <div class="relative aspect-video w-full overflow-hidden group">
+                        <img src="${bgImg}" alt="Cutscene Preview" class="w-full h-full object-cover brightness-50 scale-105 transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col items-center justify-center p-6 text-center">
+                            <div onclick="openQuickMediaModal('video')" class="w-16 h-16 rounded-full bg-purple-600/80 hover:bg-purple-500 border-2 border-purple-300 flex items-center justify-center text-white text-2xl cursor-pointer shadow-[0_0_30px_rgba(168,85,247,0.8)] transition transform hover:scale-110 mb-3">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                            <h5 class="font-title font-bold text-lg sm:text-xl text-purple-200 tracking-wide">
+                                ${escapeHtml(chap.videoCaption || 'Hoạt Cảnh Cao Trào Cuối Chương')}
+                            </h5>
+                            <p class="text-xs text-slate-300 max-w-md mt-1">
+                                Bấm nút Play hoặc "+ Nạp Link Video" để gắn link YouTube, TikTok/MP4 hoặc tải video từ máy cho đoạn kết chương này.
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // =========================================================================
+        // RENDER TRANG THẦN VỊ & MA VỊ (DANH SÁCH + SÂN KHẤU RPG INSPECTOR + RADAR SVG)
+        // =========================================================================
+        function renderRoster(faction) {
+            const listEl = document.getElementById(`${faction}-roster-list`);
+            const list = appData[faction] || [];
+            const selectedId = faction === 'thanvi' ? selectedThanViId : selectedMaViId;
+            const isDivine = faction === 'thanvi';
+
+            listEl.innerHTML = list.map(char => {
+                const isSelected = char.id === selectedId;
+                const totalPower = char.stats.reduce((a, b) => a + b, 0);
+                const activeClasses = isDivine
+                    ? (isSelected ? 'border-amber-400 bg-amber-500/15 shadow-[0_0_20px_rgba(245,158,11,0.25)]' : 'border-slate-800 bg-slate-900/70 hover:border-amber-500/40')
+                    : (isSelected ? 'border-rose-500 bg-rose-500/15 shadow-[0_0_20px_rgba(225,29,72,0.3)]' : 'border-slate-800 bg-slate-900/70 hover:border-rose-500/40');
+
+                return `
+                    <div onclick="selectCharacter('${faction}', '${char.id}')" class="cursor-pointer rounded-xl p-3 border transition-all flex items-center gap-3.5 ${activeClasses}">
+                        <div class="relative w-14 h-16 rounded-lg overflow-hidden shrink-0 border ${isDivine ? 'border-amber-400/60' : 'border-rose-500/60'}">
+                            <img src="${char.image}" alt="${escapeHtml(char.name)}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/300x400/1e293b/fbbf24?text=Avatar'">
+                            <span class="absolute bottom-0 right-0 px-1.5 py-0.2 text-[9px] font-extrabold ${isDivine ? 'bg-amber-500 text-black' : 'bg-rose-600 text-white'}">
+                                ${escapeHtml(char.tier)}
+                            </span>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center justify-between gap-1">
+                                <h4 class="font-title font-bold text-sm text-white truncate">${escapeHtml(char.name)}</h4>
+                            </div>
+                            <p class="text-[11px] ${isDivine ? 'text-amber-300' : 'text-rose-300'} truncate font-medium">${escapeHtml(char.title)}</p>
+                            <div class="flex items-center justify-between mt-1 text-[10px] text-slate-400">
+                                <span class="truncate">${escapeHtml(char.rank)}</span>
+                                <span class="font-bold ${isDivine ? 'text-amber-400' : 'text-rose-400'}">⚡${totalPower}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            renderCharacterInspector(faction);
+        }
+
+        function selectCharacter(faction, id) {
+            if (faction === 'thanvi') {
+                selectedThanViId = id;
+            } else {
+                selectedMaViId = id;
+            }
+            renderRoster(faction);
+        }
+
+        function switchCharSubTab(faction, subTab) {
+            activeCharSubTab = subTab;
+            renderCharacterInspector(faction);
+        }
+
+        function renderCharacterInspector(faction) {
+            const container = document.getElementById(`${faction}-inspector`);
+            const list = appData[faction] || [];
+            const selectedId = faction === 'thanvi' ? selectedThanViId : selectedMaViId;
+            const char = list.find(c => c.id === selectedId) || list[0];
+
+            if (!char) {
+                container.innerHTML = `<div class="py-16 text-center text-slate-400">Chưa có hồ sơ nào. Hãy bấm nút "+ Nạp Hình & Hồ Sơ" để khởi tạo!</div>`;
+                return;
+            }
+
+            const isDivine = faction === 'thanvi';
+            const labels = STAT_LABELS[faction];
+            const totalPower = char.stats.reduce((a, b) => a + b, 0);
+            const avgPower = Math.round(totalPower / 6);
+            const radarSvg = buildRadarChartSVG(char.stats, labels, isDivine);
+
+            const accentText = isDivine ? 'text-amber-300' : 'text-rose-400';
+            const badgeBg = isDivine ? 'bg-amber-500/20 border-amber-400/50 text-amber-300' : 'bg-rose-500/20 border-rose-500/50 text-rose-300';
+            const barGradient = isDivine ? 'from-amber-600 via-yellow-400 to-teal-300' : 'from-rose-700 via-rose-500 to-purple-500';
+
+            container.innerHTML = `
+                <!-- Vòng Pháp Trận Xoay Chìm Phía Sau -->
+                <div class="absolute -left-20 -bottom-20 w-96 h-96 opacity-10 pointer-events-none magic-circle-spin">
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="${isDivine ? '#fbbf24' : '#f43f5e'}" stroke-width="2" stroke-dasharray="8 4"/>
+                        <circle cx="100" cy="100" r="70" fill="none" stroke="${isDivine ? '#38bdf8' : '#a855f7'}" stroke-width="1.5"/>
+                        <polygon points="100,15 173,142 27,142" fill="none" stroke="${isDivine ? '#fbbf24' : '#f43f5e'}" stroke-width="1.5"/>
+                        <polygon points="100,185 173,58 27,58" fill="none" stroke="${isDivine ? '#fbbf24' : '#f43f5e'}" stroke-width="1.5"/>
+                    </svg>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-center relative z-10">
+                    
+                    <!-- CỘT CHÂN DUNG NHÂN VẬT (5 cols) -->
+                    <div class="xl:col-span-5 flex flex-col items-center">
+                        <div class="relative group w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden border-2 ${isDivine ? 'border-amber-400/70 shadow-[0_0_40px_rgba(251,191,36,0.25)]' : 'border-rose-500/70 shadow-[0_0_40px_rgba(225,29,72,0.3)]'} bg-slate-950">
+                            
+                            <!-- Ảnh Nhân Vật -->
+                            <img src="${char.image}" alt="${escapeHtml(char.name)}" onclick="openLightbox('${char.image}', '${escapeHtml(char.name)} — ${escapeHtml(char.title)}')" class="w-full h-full object-cover cursor-zoom-in transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x800/0f172a/fbbf24?text=Chan+Dung+Nhan+Vat'">
+
+                            <!-- Nhãn Phẩm Cấp Góc Trái -->
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-lg ${isDivine ? 'bg-gradient-to-r from-amber-500 to-yellow-300 text-black' : 'bg-gradient-to-r from-rose-600 to-purple-600 text-white'} font-title font-black text-sm shadow-lg">
+                                PHẨM CẤP: ${escapeHtml(char.tier)}
+                            </div>
+
+                            <!-- Nhãn Chiến Lực Góc Phải -->
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-black/80 backdrop-blur-md border ${isDivine ? 'border-amber-400/50 text-amber-300' : 'border-rose-500/50 text-rose-300'} text-xs font-extrabold">
+                                <i class="fa-solid fa-bolt mr-1"></i> ${isDivine ? 'Thần Uy' : 'Ma Uy'}: ${totalPower}
+                            </div>
+
+                            <!-- Thông tin Đế Chân Dung -->
+                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/85 to-transparent p-4 pt-12">
+                                <span class="text-[11px] uppercase tracking-widest font-bold ${accentText}">${escapeHtml(char.rank)}</span>
+                                <h3 class="font-title font-extrabold text-2xl text-white mt-0.5">${escapeHtml(char.name)}</h3>
+                                <p class="text-xs text-slate-300">${escapeHtml(char.title)}</p>
+                            </div>
+                        </div>
+
+                        <!-- Hàng Nút Thao Tác Nhanh Dưới Chân Dung (Đổi Hình, Sửa Chỉ Số, Xóa) -->
+                        <div class="flex flex-wrap items-center justify-center gap-2 mt-3.5 w-full">
+                            <label class="cursor-pointer px-3 py-1.5 rounded-lg text-xs font-bold ${badgeBg} border hover:opacity-90 flex items-center gap-1.5 transition">
+                                <i class="fa-solid fa-camera"></i> Nạp Ảnh Khác
+                                <input type="file" accept="image/*" class="hidden" onchange="quickReplaceCharacterImage(event, '${faction}', '${char.id}')">
+                            </label>
+                            <button onclick="openCharacterModal('${faction}', '${char.id}')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5 transition">
+                                <i class="fa-solid fa-sliders"></i> Sửa Hồ Sơ & Chỉ Số
+                            </button>
+                            <button onclick="deleteCharacter('${faction}', '${char.id}')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold bg-rose-950/60 hover:bg-rose-900/80 text-rose-300 border border-rose-800/50 transition" title="Xóa hồ sơ này">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CỘT CHỈ SỐ RPG, BIỂU ĐỒ LỤC GIÁC & HỒ SƠ TUYỆT KỸ (7 cols) -->
+                    <div class="xl:col-span-7 space-y-5">
+                        
+                        <!-- Header Hồ Sơ Nhân Vật -->
+                        <div class="border-b border-slate-800 pb-4 space-y-2">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded text-xs font-bold border ${badgeBg}">
+                                    <i class="fa-solid fa-wand-sparkles mr-1"></i> ${escapeHtml(char.rank)}
+                                </span>
+                                <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">
+                                    Cảnh giới: <strong class="text-white">${escapeHtml(char.realm)}</strong>
+                                </span>
+                            </div>
+
+                            <h3 class="font-title font-extrabold text-2xl sm:text-3xl text-white tracking-wide">
+                                ${escapeHtml(char.name)} <span class="text-base sm:text-lg font-normal ${accentText}">— ${escapeHtml(char.title)}</span>
+                            </h3>
+
+                            <p class="text-xs text-slate-400">
+                                <i class="fa-solid fa-khanda mr-1 ${accentText}"></i> Pháp bảo bản mệnh: <strong class="text-slate-200">${escapeHtml(char.weapon || 'Chưa công bố')}</strong>
+                            </p>
+                        </div>
+
+                        <!-- Khu vực Biểu Đồ Lục Giác (Radar Chart) + 6 Thanh Chỉ Số RPG -->
+                        <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center bg-black/40 p-4 rounded-2xl border border-slate-800/90">
+                            <!-- Biểu đồ Lục Giác SVG (5 cols) -->
+                            <div class="sm:col-span-5 flex flex-col items-center justify-center">
+                                ${radarSvg}
+                                <span class="text-[11px] text-slate-400 mt-1">Căn cốt trung bình: <strong class="${accentText}">${avgPower}/1000</strong></span>
+                            </div>
+
+                            <!-- 6 Thanh Chỉ Số Chi Tiết (7 cols) -->
+                            <div class="sm:col-span-7 space-y-2.5">
+                                ${char.stats.map((val, idx) => {
+                                    const pct = Math.min(100, Math.round((val / 1000) * 100));
+                                    const rankTag = val >= 980 ? 'EX' : (val >= 940 ? 'SSS' : (val >= 880 ? 'SS' : 'S'));
+                                    return `
+                                        <div>
+                                            <div class="flex items-center justify-between text-xs mb-1">
+                                                <span class="font-semibold text-slate-200">${labels[idx]}</span>
+                                                <div class="flex items-center gap-1.5">
+                                                    <span class="text-[10px] px-1.5 py-0.2 rounded font-bold ${isDivine ? 'bg-amber-500/20 text-amber-300' : 'bg-rose-500/20 text-rose-300'}">${rankTag}</span>
+                                                    <span class="font-bold text-white">${val}<span class="text-slate-500 text-[10px]">/1000</span></span>
+                                                </div>
+                                            </div>
+                                            <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800 p-[1px]">
+                                                <div class="h-full rounded-full bg-gradient-to-r ${barGradient} stat-bar-fill" style="width: ${pct}%"></div>
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Tiểu Sử & Thần Thông / Ma Công Tuyệt Kỹ -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-black/35 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                                <h4 class="font-title font-bold text-xs uppercase tracking-wider ${accentText}">
+                                    <i class="fa-solid fa-book-skull mr-1"></i> Tiểu Sử & Truyền Thuyết
+                                </h4>
+                                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-serif italic">
+                                    "${escapeHtml(char.lore)}"
+                                </p>
+                            </div>
+
+                            <div class="bg-black/35 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                                <h4 class="font-title font-bold text-xs uppercase tracking-wider ${accentText}">
+                                    <i class="fa-solid fa-burst mr-1"></i> ${isDivine ? 'Thần Thông Bí Pháp' : 'Ma Công Cấm Thuật'}
+                                </h4>
+                                <div class="flex flex-wrap gap-2 pt-1">
+                                    ${(char.skills || []).map(sk => `
+                                        <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${isDivine ? 'bg-amber-500/15 text-amber-200 border border-amber-500/30' : 'bg-rose-500/15 text-rose-200 border border-rose-500/30'}">
+                                            ✦ ${escapeHtml(sk)}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            `;
+        }
+
+        // Vẽ biểu đồ Radar Lục Giác bằng SVG chuẩn xác
+        function buildRadarChartSVG(stats, labels, isDivine) {
+            const size = 210;
+            const center = size / 2;
+            const radius = 68;
+            const strokeColor = isDivine ? '#fbbf24' : '#f43f5e';
+            const fillColor = isDivine ? 'rgba(251, 191, 36, 0.28)' : 'rgba(244, 63, 94, 0.28)';
+            const gridColor = isDivine ? 'rgba(251, 191, 36, 0.2)' : 'rgba(244, 63, 94, 0.2)';
+
+            const getPoint = (index, ratio) => {
+                const angle = (Math.PI * 2 * index) / 6 - Math.PI / 2;
+                const x = center + radius * ratio * Math.cos(angle);
+                const y = center + radius * ratio * Math.sin(angle);
+                return `${x.toFixed(1)},${y.toFixed(1)}`;
+            };
+
+            // 3 vòng lưới lục giác (33%, 66%, 100%)
+            const rings = [0.35, 0.7, 1].map(r => {
+                const pts = [0, 1, 2, 3, 4, 5].map(i => getPoint(i, r)).join(' ');
+                return `<polygon points="${pts}" fill="none" stroke="${gridColor}" stroke-width="1"/>`;
+            }).join('');
+
+            // Các trục từ tâm ra 6 đỉnh
+            const axes = [0, 1, 2, 3, 4, 5].map(i => {
+                const endPt = getPoint(i, 1).split(',');
+                return `<line x1="${center}" y1="${center}" x2="${endPt[0]}" y2="${endPt[1]}" stroke="${gridColor}" stroke-width="1"/>`;
+            }).join('');
+
+            // Đa giác chỉ số nhân vật
+            const dataPoints = stats.map((val, i) => getPoint(i, Math.max(0.15, Math.min(1, val / 1000)))).join(' ');
+
+            // Nhãn 6 đỉnh
+            const labelNodes = labels.map((text, i) => {
+                const angle = (Math.PI * 2 * i) / 6 - Math.PI / 2;
+                const lx = center + (radius + 24) * Math.cos(angle);
+                const ly = center + (radius + 18) * Math.sin(angle);
+                return `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" fill="#e2e8f0" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="middle">${text}</text>`;
+            }).join('');
+
+            return `
+                <svg viewBox="0 0 ${size} ${size}" class="w-44 h-44 overflow-visible">
+                    ${rings}
+                    ${axes}
+                    <polygon points="${dataPoints}" fill="${fillColor}" stroke="${strokeColor}" stroke-width="2.2"/>
+                    ${stats.map((val, i) => {
+                        const pt = getPoint(i, Math.max(0.15, Math.min(1, val / 1000))).split(',');
+                        return `<circle cx="${pt[0]}" cy="${pt[1]}" r="3.2" fill="${strokeColor}"/>`;
+                    }).join('')}
+                    ${labelNodes}
+                </svg>
+            `;
+        }
+
+        // =========================================================================
+        // XỬ LÝ NẠP HÌNH & HỒ SƠ THẦN VỊ / MA VỊ (MODAL)
+        // =========================================================================
+        function openCharacterModal(faction, editId = null) {
+            setCharModalFaction(faction);
+            const editInput = document.getElementById('char-edit-id');
+
+            if (editId) {
+                const char = appData[faction].find(c => c.id === editId);
+                if (char) {
+                    editInput.value = char.id;
+                    document.getElementById('char-name').value = char.name;
+                    document.getElementById('char-title').value = char.title;
+                    document.getElementById('char-rank').value = char.rank;
+                    document.getElementById('char-realm').value = char.realm;
+                    document.getElementById('char-weapon').value = char.weapon || '';
+                    document.getElementById('char-tier').value = char.tier || 'SSS+';
+                    document.getElementById('char-image-url').value = char.image;
+                    document.getElementById('char-preview-img').src = char.image;
+                    document.getElementById('char-lore').value = char.lore || '';
+                    document.getElementById('char-skills').value = (char.skills || []).join('; ');
+                    char.stats.forEach((v, i) => {
+                        document.getElementById(`stat-input-${i}`).value = v;
+                    });
+                    updateStatSliderPreview();
+                }
+            } else {
+                editInput.value = '';
+                document.getElementById('form-character').reset();
+                const defaultImg = SAMPLE_PORTRAITS[Math.floor(Math.random() * SAMPLE_PORTRAITS.length)];
+                document.getElementById('char-image-url').value = defaultImg;
+                document.getElementById('char-preview-img').src = defaultImg;
+                [950, 960, 910, 940, 930, 920].forEach((v, i) => {
+                    document.getElementById(`stat-input-${i}`).value = v;
+                });
+                updateStatSliderPreview();
+            }
+
+            document.getElementById('modal-character').classList.remove('hidden');
+        }
+
+        function setCharModalFaction(faction) {
+            currentCharModalFaction = faction;
+            const isDivine = faction === 'thanvi';
+            const btnThan = document.getElementById('btn-faction-thanvi');
+            const btnMa = document.getElementById('btn-faction-mavi');
+            const titleEl = document.getElementById('char-modal-title');
+
+            if (isDivine) {
+                btnThan.className = 'py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-2 bg-amber-500/25 text-amber-300 border border-amber-400/50';
+                btnMa.className = 'py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-2 text-slate-400 hover:text-rose-300';
+                titleEl.textContent = 'NẠP HÌNH & HỒ SƠ THẦN VỊ (BẢNG PHONG THẦN)';
+                titleEl.className = 'font-title font-extrabold text-xl text-amber-300';
+            } else {
+                btnMa.className = 'py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-2 bg-rose-500/25 text-rose-300 border border-rose-500/50';
+                btnThan.className = 'py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-2 text-slate-400 hover:text-amber-300';
+                titleEl.textContent = 'NẠP HÌNH & HỒ SƠ MA VỊ (VẠN MA ĐIỆN)';
+                titleEl.className = 'font-title font-extrabold text-xl text-rose-400';
+            }
+
+            STAT_LABELS[faction].forEach((lb, idx) => {
+                document.getElementById(`stat-label-${idx}`).textContent = lb;
+            });
+        }
+
+        function updateStatSliderPreview() {
+            let sum = 0;
+            for (let i = 0; i < 6; i++) {
+                const v = parseInt(document.getElementById(`stat-input-${i}`).value, 10) || 800;
+                document.getElementById(`stat-val-${i}`).textContent = v;
+                sum += v;
+            }
+            document.getElementById('char-modal-total-power').textContent = sum;
+        }
+
+        function pickSamplePortrait() {
+            samplePortraitIndex = (samplePortraitIndex + 1) % SAMPLE_PORTRAITS.length;
+            const url = SAMPLE_PORTRAITS[samplePortraitIndex];
+            document.getElementById('char-image-url').value = url;
+            document.getElementById('char-preview-img').src = url;
+        }
+
+        function saveCharacterProfile(e) {
+            e.preventDefault();
+            const faction = currentCharModalFaction;
+            const editId = document.getElementById('char-edit-id').value;
+
+            const stats = [];
+            for (let i = 0; i < 6; i++) {
+                stats.push(parseInt(document.getElementById(`stat-input-${i}`).value, 10) || 850);
+            }
+
+            const skillsRaw = document.getElementById('char-skills').value.trim();
+            const skills = skillsRaw
+                ? skillsRaw.split(';').map(s => s.trim()).filter(Boolean)
+                : (faction === 'thanvi' ? ['Thái Cổ Thần Quyết', 'Vạn Pháp Quy Nhất'] : ['Cửu U Ma Công', 'Thôn Thiên Phệ Địa']);
+
+            const profile = {
+                id: editId || `${faction}-${Date.now()}`,
+                name: document.getElementById('char-name').value.trim(),
+                title: document.getElementById('char-title').value.trim(),
+                rank: document.getElementById('char-rank').value.trim(),
+                realm: document.getElementById('char-realm').value.trim(),
+                weapon: document.getElementById('char-weapon').value.trim() || 'Thái Cổ Thần Binh',
+                tier: document.getElementById('char-tier').value,
+                image: document.getElementById('char-image-url').value.trim() || SAMPLE_PORTRAITS[0],
+                stats: stats,
+                lore: document.getElementById('char-lore').value.trim() || 'Một vị chí tôn thần bí vừa xuất thế trên đại lục.',
+                skills: skills
+            };
+
+            if (editId) {
+                const idx = appData[faction].findIndex(c => c.id === editId);
+                if (idx !== -1) appData[faction][idx] = profile;
+            } else {
+                appData[faction].unshift(profile);
+            }
+
+            if (faction === 'thanvi') selectedThanViId = profile.id;
+            else selectedMaViId = profile.id;
+
+            saveDataToStorage();
+            renderRoster(faction);
+            closeModal('modal-character');
+            switchMainTab(faction);
+            showToast(`Đã lưu hồ sơ "${profile.name}" vào ${faction === 'thanvi' ? 'Bảng Phong Thần' : 'Vạn Ma Điện'}!`, 'emerald');
+        }
+
+        function quickReplaceCharacterImage(event, faction, charId) {
+            const file = event.target.files[0];
+            if (!file) return;
+            compressAndReadImage(file, (dataUrl) => {
+                const char = appData[faction].find(c => c.id === charId);
+                if (char) {
+                    char.image = dataUrl;
+                    saveDataToStorage();
+                    renderRoster(faction);
+                    showToast(`Đã cập nhật hình ảnh mới cho ${char.name}!`, 'emerald');
+                }
+            });
+        }
+
+        function deleteCharacter(faction, charId) {
+            if (appData[faction].length <= 1) {
+                showToast('Cần giữ lại ít nhất 1 nhân vật trên bảng!', 'amber');
+                return;
+            }
+            appData[faction] = appData[faction].filter(c => c.id !== charId);
+            if (faction === 'thanvi') selectedThanViId = appData.thanvi[0].id;
+            else selectedMaViId = appData.mavi[0].id;
+            saveDataToStorage();
+            renderRoster(faction);
+            showToast('Đã xóa hồ sơ nhân vật!', 'amber');
+        }
+
+        // =========================================================================
+        // XỬ LÝ NẠP TEXT TRUYỆN / THÊM & SỬA CHƯƠNG + NẠP NHANH MEDIA
+        // =========================================================================
+        function openChapterModal(mode) {
+            document.getElementById('chapter-modal-mode').value = mode;
+            const heading = document.getElementById('chapter-modal-heading');
+
+            if (mode === 'edit') {
+                const chap = appData.chapters[currentChapterIndex];
+                heading.textContent = `CHỈNH SỬA & NẠP BỔ SUNG TEXT — ${chap.order.toUpperCase()}`;
+                document.getElementById('chap-input-order').value = chap.order;
+                document.getElementById('chap-input-title').value = chap.title;
+                document.getElementById('chap-input-content').value = chap.content;
+                document.getElementById('chap-input-podcast').value = chap.podcastUrl || '';
+                document.getElementById('chap-input-video').value = chap.videoUrl || '';
+                document.getElementById('chap-input-image').value = (chap.illustrations && chap.illustrations[0]) ? chap.illustrations[0].url : '';
+            } else {
+                const nextNum = appData.chapters.length + 1;
+                heading.textContent = 'NẠP TEXT TRUYỆN — THÊM CHƯƠNG MỚI';
+                document.getElementById('form-chapter').reset();
+                document.getElementById('chap-input-order').value = `Chương ${nextNum}`;
+            }
+
+            document.getElementById('modal-chapter').classList.remove('hidden');
+        }
+
+        function insertSampleParagraph() {
+            const textarea = document.getElementById('chap-input-content');
+            const sample = `\n\nTrên bầu trời Cửu Tiêu, vạn đạo kiếm quang hóa thành một con ngân long khổng lồ lao thẳng xuống vực sâu. Diệp Trần khẽ nhếch môi, ấn quyết trong tay biến ảo khôn lường, từng chữ cổ văn bằng vàng ròng bay lên trấn áp hư không!`;
+            textarea.value += sample;
+        }
+
+        function saveChapterData(e) {
+            e.preventDefault();
+            const mode = document.getElementById('chapter-modal-mode').value;
+            const order = document.getElementById('chap-input-order').value.trim();
+            const title = document.getElementById('chap-input-title').value.trim();
+            const content = document.getElementById('chap-input-content').value.trim();
+            const podcastUrl = document.getElementById('chap-input-podcast').value.trim();
+            const videoUrl = document.getElementById('chap-input-video').value.trim();
+            const imgUrl = document.getElementById('chap-input-image').value.trim();
+
+            if (mode === 'edit') {
+                const chap = appData.chapters[currentChapterIndex];
+                chap.order = order;
+                chap.title = title;
+                chap.content = content;
+                if (podcastUrl) chap.podcastUrl = podcastUrl;
+                if (videoUrl) chap.videoUrl = videoUrl;
+                if (imgUrl) {
+                    if (!chap.illustrations) chap.illustrations = [];
+                    if (chap.illustrations.length === 0 || chap.illustrations[0].url !== imgUrl) {
+                        chap.illustrations.unshift({ url: imgUrl, caption: `Minh họa ${order}: ${title}` });
+                    }
+                }
+            } else {
+                const newChap = {
+                    id: `chap-${Date.now()}`,
+                    order: order,
+                    title: title,
+                    podcastUrl: podcastUrl || 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                    podcastTitle: `Podcast Dẫn Truyện ${order}: ${title}`,
+                    illustrations: imgUrl ? [{ url: imgUrl, caption: `Minh họa ${order}: ${title}` }] : [
+                        {
+                            url: SAMPLE_PORTRAITS[appData.chapters.length % SAMPLE_PORTRAITS.length],
+                            caption: `Tranh minh họa ${order}: ${title}`
+                        }
+                    ],
+                    content: content,
+                    videoUrl: videoUrl,
+                    videoCaption: `Đoạn phim cao trào cuối ${order}: ${title}`
+                };
+                appData.chapters.push(newChap);
+                currentChapterIndex = appData.chapters.length - 1;
+            }
+
+            saveDataToStorage();
+            renderChapterSelector();
+            renderCurrentChapter();
+            closeModal('modal-chapter');
+            switchMainTab('reader');
+            scrollToReaderZone();
+            showToast(`Đã lưu nội dung "${order}: ${title}" thành công!`, 'emerald');
+        }
+
+        // Modal Nạp Nhanh Podcast / Ảnh / Video ngay trong chương đang đọc
+        function openQuickMediaModal(type) {
+            document.getElementById('quick-media-type').value = type;
+            const titleEl = document.getElementById('quick-media-title');
+            const labelEl = document.getElementById('quick-media-label');
+            const urlInput = document.getElementById('quick-media-url');
+            const capInput = document.getElementById('quick-media-caption');
+            const fileInput = document.getElementById('quick-media-file-input');
+
+            const chap = appData.chapters[currentChapterIndex];
+            urlInput.value = '';
+            capInput.value = '';
+
+            if (type === 'podcast') {
+                titleEl.innerHTML = `<i class="fa-solid fa-podcast text-teal-400 mr-1.5"></i> NẠP LINK PODCAST / AUDIO ĐẦU CHƯƠNG`;
+                labelEl.textContent = 'Dán link MP3, Spotify, YouTube hoặc chọn file âm thanh từ máy:';
+                urlInput.placeholder = 'https://... (MP3, Spotify, YouTube)';
+                urlInput.value = chap.podcastUrl || '';
+                capInput.value = chap.podcastTitle || '';
+                fileInput.accept = 'audio/*';
+            } else if (type === 'image') {
+                titleEl.innerHTML = `<i class="fa-solid fa-images text-amber-400 mr-1.5"></i> NẠP THÊM ẢNH MINH HỌA VÀO THÂN CHƯƠNG`;
+                labelEl.textContent = 'Dán link ảnh (URL) hoặc tải ảnh từ máy tính/điện thoại:';
+                urlInput.placeholder = 'https://... (Link ảnh JPG/PNG/WebP)';
+                capInput.placeholder = 'Nhập lời bình cho bức tranh minh họa này...';
+                fileInput.accept = 'image/*';
+            } else if (type === 'video') {
+                titleEl.innerHTML = `<i class="fa-solid fa-clapperboard text-purple-400 mr-1.5"></i> NẠP LINK VIDEO CAO TRÀO CUỐI CHƯƠNG`;
+                labelEl.textContent = 'Dán link YouTube (watch?v=..., youtu.be/...) hoặc link MP4 / tải file:';
+                urlInput.placeholder = 'https://www.youtube.com/watch?v=... hoặc link MP4';
+                urlInput.value = chap.videoUrl || '';
+                capInput.value = chap.videoCaption || '';
+                fileInput.accept = 'video/*';
+            }
+
+            document.getElementById('modal-quick-media').classList.remove('hidden');
+        }
+
+        function handleQuickFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const type = document.getElementById('quick-media-type').value;
+            const urlInput = document.getElementById('quick-media-url');
+
+            if (type === 'image') {
+                compressAndReadImage(file, (dataUrl) => {
+                    urlInput.value = dataUrl;
+                    showToast('Đã nạp ảnh từ thiết bị!', 'emerald');
+                });
+            } else {
+                const objUrl = URL.createObjectURL(file);
+                urlInput.value = objUrl;
+                showToast(`Đã nạp tệp "${file.name}"!`, 'emerald');
+            }
+        }
+
+        function saveQuickMedia(e) {
+            e.preventDefault();
+            const type = document.getElementById('quick-media-type').value;
+            const url = document.getElementById('quick-media-url').value.trim();
+            const caption = document.getElementById('quick-media-caption').value.trim();
+            const chap = appData.chapters[currentChapterIndex];
+
+            if (type === 'podcast') {
+                chap.podcastUrl = url;
+                if (caption) chap.podcastTitle = caption;
+                showToast('Đã cập nhật Podcast/Audio đầu chương!', 'emerald');
+            } else if (type === 'image') {
+                if (!chap.illustrations) chap.illustrations = [];
+                chap.illustrations.unshift({
+                    url: url,
+                    caption: caption || `Tranh minh họa ${chap.order}`
+                });
+                showToast('Đã thêm ảnh minh họa vào thân chương!', 'emerald');
+            } else if (type === 'video') {
+                chap.videoUrl = url;
+                if (caption) chap.videoCaption = caption;
+                showToast('Đã cập nhật Video cao trào cuối chương!', 'emerald');
+            }
+
+            saveDataToStorage();
+            renderCurrentChapter();
+            closeModal('modal-quick-media');
+        }
+
+        // Modal Đổi Ảnh Bìa & Thông Tin Truyện
+        function openCoverModal() {
+            const n = appData.novel;
+            document.getElementById('cover-input-url').value = n.cover;
+            document.getElementById('cover-input-title').value = n.title;
+            document.getElementById('cover-input-author').value = n.author;
+            document.getElementById('cover-input-system').value = n.system;
+            document.getElementById('cover-input-synopsis').value = n.synopsis;
+            document.getElementById('modal-cover').classList.remove('hidden');
+        }
+
+        function saveNovelCoverAndInfo(e) {
+            e.preventDefault();
+            appData.novel.cover = document.getElementById('cover-input-url').value.trim();
+            appData.novel.title = document.getElementById('cover-input-title').value.trim();
+            appData.novel.author = document.getElementById('cover-input-author').value.trim();
+            appData.novel.system = document.getElementById('cover-input-system').value.trim();
+            appData.novel.synopsis = document.getElementById('cover-input-synopsis').value.trim();
+            saveDataToStorage();
+            renderNovelHero();
+            closeModal('modal-cover');
+            showToast('Đã cập nhật ảnh bìa và thông tin bộ truyện!', 'emerald');
+        }
+
+        // =========================================================================
+        // TIỆN ÍCH UPLOAD FILE, NÉN ẢNH, TÙY CHỈNH ĐỌC TRUYỆN & ÂM THANH CỔ CẦM
+        // =========================================================================
+        function handleImageFileUpload(event, targetInputId, previewImgId = null) {
+            const file = event.target.files[0];
+            if (!file) return;
+            compressAndReadImage(file, (dataUrl) => {
+                document.getElementById(targetInputId).value = dataUrl;
+                if (previewImgId) {
+                    document.getElementById(previewImgId).src = dataUrl;
+                }
+                showToast('Đã tải ảnh từ thiết bị thành công!', 'emerald');
+            });
+        }
+
+        function handleMediaFileUpload(event, targetInputId) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const objUrl = URL.createObjectURL(file);
+            document.getElementById(targetInputId).value = objUrl;
+            showToast(`Đã chọn tệp "${file.name}"!`, 'emerald');
+        }
+
+        function updateImagePreview(url, previewImgId) {
+            if (url && url.trim().length > 5) {
+                document.getElementById(previewImgId).src = url.trim();
+            }
+        }
+
+        // Nén ảnh bằng Canvas để lưu mượt vào localStorage
+        function compressAndReadImage(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = new Image();
+                img.onload = function () {
+                    const canvas = document.createElement('canvas');
+                    const maxDim = 900;
+                    let w = img.width;
+                    let h = img.height;
+                    if (w > maxDim || h > maxDim) {
+                        if (w > h) {
+                            h = Math.round((h * maxDim) / w);
+                            w = maxDim;
+                        } else {
+                            w = Math.round((w * maxDim) / h);
+                            h = maxDim;
+                        }
+                    }
+                    canvas.width = w;
+                    canvas.height = h;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, w, h);
+                    callback(canvas.toDataURL('image/jpeg', 0.82));
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function extractYouTubeId(url) {
+            if (!url) return null;
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        function changeFontSize(delta) {
+            readerFontSize = Math.min(28, Math.max(15, readerFontSize + delta));
+            document.getElementById('chapter-text-content').style.fontSize = `${readerFontSize}px`;
+            document.getElementById('font-size-label').textContent = `${readerFontSize}px`;
+        }
+
+        function setReaderTheme(theme) {
+            const paper = document.getElementById('chapter-paper');
+            paper.classList.remove('reader-theme-obsidian', 'reader-theme-parchment', 'reader-theme-jade');
+            paper.classList.add(`reader-theme-${theme}`);
+        }
+
+        // Nhạc Cổ Cầm (Pentatonic Guzheng) tạo bằng Web Audio API không cần file ngoài
+        function toggleBuiltinGuzhengAudio() {
+            const label = document.getElementById('builtin-bgm-label');
+            if (isBuiltinBgmPlaying) {
+                clearInterval(bgmInterval);
+                isBuiltinBgmPlaying = false;
+                label.textContent = 'Phát Nhạc Cổ Cầm';
+                showToast('Đã tạm dừng tiếng Cổ Cầm dẫn truyện.', 'amber');
+                return;
+            }
+
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            // Ngũ cung cổ phong (Cung - Thương - Giốc - Chủy - Vũ)
+            const notes = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25];
+            const pluckNote = () => {
+                if (!isBuiltinBgmPlaying) return;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                const freq = notes[Math.floor(Math.random() * notes.length)];
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 0.04);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.4);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 2.5);
+            };
+
+            isBuiltinBgmPlaying = true;
+            label.textContent = 'Đang Phát Cổ Cầm (Tắt)';
+            pluckNote();
+            bgmInterval = setInterval(pluckNote, 1350);
+            showToast('Đang phát giai điệu Huyền Âm Cổ Cầm dẫn truyện!', 'emerald');
+        }
+
+        // Lightbox & Modals
+        function openLightbox(url, caption) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            document.getElementById('modal-lightbox').classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function openResetConfirmModal() {
+            document.getElementById('modal-reset-confirm').classList.remove('hidden');
+        }
+
+        function confirmResetAllData() {
+            localStorage.removeItem(STORAGE_KEY);
+            appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+            currentChapterIndex = 0;
+            selectedThanViId = appData.thanvi[0].id;
+            selectedMaViId = appData.mavi[0].id;
+            saveDataToStorage();
+            renderAll();
+            closeModal('modal-reset-confirm');
+            showToast('Đã khôi phục toàn bộ dữ liệu mẫu mặc định!', 'emerald');
+        }
+
+        function showToast(message, color = 'amber') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const borderClass = color === 'emerald' ? 'border-emerald-400 text-emerald-200' : 'border-amber-400 text-amber-200';
+            toast.className = `px-4 py-3 rounded-xl bg-[#0b0e17]/95 border ${borderClass} shadow-2xl text-xs font-bold flex items-center gap-2 transition-all duration-300`;
+            toast.innerHTML = `<i class="fa-solid fa-sparkles"></i> <span>${escapeHtml(message)}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        // =========================================================================
+        // HIỆU ỨNG HẠT LINH KHÍ / MA KHÍ TRÊN CANVAS NỀN
+        // =========================================================================
+        function initParticleCanvas() {
+            const canvas = document.getElementById('bgParticleCanvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            const resize = () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            };
+            window.addEventListener('resize', resize);
+            resize();
+
+            for (let i = 0; i < 45; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: Math.random() * 2.2 + 0.6,
+                    vy: -(Math.random() * 0.45 + 0.15),
+                    vx: (Math.random() - 0.5) * 0.3,
+                    alpha: Math.random() * 0.65 + 0.2
+                });
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const isMaVi = currentTab === 'mavi';
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.y < -10) {
+                        p.y = canvas.height + 10;
+                        p.x = Math.random() * canvas.width;
+                    }
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = isMaVi
+                        ? `rgba(244, 63, 94, ${p.alpha})`
+                        : `rgba(251, 191, 36, ${p.alpha})`;
+                    ctx.fill();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
+        }
+    </script>
+</body>
+</html>
